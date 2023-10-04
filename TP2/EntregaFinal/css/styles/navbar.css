@@ -7,7 +7,6 @@
 .navbar {
     padding: 0px 20px;
     background-color: var(--color-primary);
-    
     display: grid;
     grid-template: auto / repeat(3, 1fr);
     grid-template-areas: "c1 c2 c3";
@@ -42,6 +41,14 @@
     width: auto;
     height: 24px;
 }
+#logo {
+    padding-left: 20px;
+}
+.search-bar button{
+    opacity: 0.7;
+}
+
+
 
 /* BURGER ICON */
 .burger-icon{
@@ -79,7 +86,7 @@
     left: 0px;
     transition: .3s cubic-bezier(.8, .5, .2, 1.4);
 }
-/* Hover */
+/* HOVER */
 .burger-icon:not(.open):hover span:nth-child(1){
     top: -2px;
     transition: .3s cubic-bezier(.8, .5, .2, 1.4);
@@ -106,6 +113,25 @@
     transition-delay: 100ms;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 800px) {
+    #text_logo {
+        display: none;
+    }
+
+    #navbar-central {
+        opacity: 0;
+    }
+    .search-bar {
+        width: auto;
+        min-height: 50px;
+        box-sizing: border-box;
+        margin: 0px;
+    }
+    .search-bar button, .search-bar input {
+        display: none;
+    }
+    #favoritos h3{
+        display: none;
+    }
 
 }
