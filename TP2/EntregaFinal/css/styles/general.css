@@ -67,9 +67,9 @@ main {
     font-family: 'Baloo 2';
     font-style: normal;
     color: var(--color-white-90);
-    overflow: hidden;
+    /* overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis; */
 }
 .h1-baloo {
     font-size: 36px;
@@ -101,6 +101,14 @@ main {
     line-height: 10px;
     font-weight: 400;
 }
+.paragraphs {
+    gap: 16px;
+}
+.paragraphs p {
+    width: 100%;
+    font-weight: 400;
+    color: var(--color-white-80);
+}
 
 
 /* ------------------------------------DECORACIONES DE TEXTO------------------------------------ */
@@ -131,6 +139,9 @@ main {
 .light-90 {
     color: var(--color-white-90);
 }
+.light-40 {
+    color: var(--color-white-40);
+}
 .dark {
     color: var(--color-dark);
 }
@@ -151,6 +162,9 @@ main {
 }
 .column {
     flex-direction: column;
+}
+.align-stretch {
+    align-items: stretch;
 }
 .align-start {
     align-items: flex-start;
@@ -182,11 +196,18 @@ main {
 .pad-8{
     padding: 8px;
 }
+.pad-10{
+    padding: 10px;
+}
 .pad-16{
     padding: 16px;
 }
 .pad-32{
     padding: 32px;
+}
+.pad-6-20{
+    box-sizing: border-box;
+    padding: 6px 20px;
 }
 .gap-100 {
     gap: 100px;
@@ -197,6 +218,9 @@ main {
 .gap-32 {
     gap: 32px;
 }
+.gap-24 {
+    gap: 24px;
+}
 .gap-18 {
     gap: 12px;
 }
@@ -205,6 +229,9 @@ main {
 }
 .gap-12 {
     gap: 12px;
+}
+.gap-10 {
+    gap: 10px;
 }
 .gap-8 {
     gap: 8px;
@@ -225,8 +252,17 @@ main {
     width: 100%;
     background-color: var(--color-white-40);
 }
-.vertical-line{
-    height: 100px;
+.vertical-line {
+    height: 100%;
     width: 1px;
     background-color: var(--color-white-40);
 }
+.margin-top-5 {
+    margin-top: 5px;
+}
+.margin-bott-5 {
+    margin-bottom: 5px;
+}
+
+
+
