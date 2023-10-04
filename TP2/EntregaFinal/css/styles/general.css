@@ -21,6 +21,7 @@
     --color-white-70:rgba(255, 255, 255, 0.70);
     --color-white-60:rgba(255, 255, 255, 0.60);
     --color-white-40:rgba(255, 255, 255, 0.40);
+    --color-white-30:rgba(255, 255, 255, 0.30);
     --color-white-05:rgba(255, 255, 255, 0.05);
 }
 
@@ -180,6 +181,9 @@ main {
 }
 .flex-end {
     justify-content: end;
+}
+.wrap {
+    flex-wrap: wrap;
 }
 .space-between {
     justify-content: space-between;

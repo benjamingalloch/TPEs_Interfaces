@@ -4,9 +4,14 @@
     position: relative;
     bottom: 0px;
     width: 100%;
+    z-index: 1;
 }
-#footer section {
+#footer section:nth-child(1) {
     background-color: var(--color-primary);
+}
+#footer section:nth-child(1) div{
+    flex-wrap: wrap;
+    justify-content: center;
 }
 #footer section:nth-child(2) {
     background-color: var(--color-primary-shadow-1);
