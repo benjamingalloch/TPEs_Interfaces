@@ -1,0 +1,7 @@
+@import url('./general.css');
+
+#infoSection {
+    width: 100%;
+    height: auto;
+    padding: 16px 30px ;
+}
