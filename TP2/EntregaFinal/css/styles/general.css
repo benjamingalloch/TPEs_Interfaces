@@ -55,7 +55,7 @@ body {
 main {
     min-height: 50vh;
     display: flex;
-    padding: 48px 0px;
+    padding: 48px 32px;
     flex-direction: column;
     align-items: center;
     gap: 28px;
@@ -143,6 +143,9 @@ main {
 .fill-width {
     width: 100%;
 }
+.fill-height {
+    height: 100%;
+}
 .half-width {
     width: 50%  !important;
 }
@@ -197,11 +200,17 @@ main {
 .gap-18 {
     gap: 12px;
 }
+.gap-16 {
+    gap: 16px;
+}
 .gap-12 {
     gap: 12px;
 }
 .gap-8 {
     gap: 8px;
+}
+.gap-6 {
+    gap: 6px;
 }
 .gap-4 {
     gap: 4px;
@@ -214,5 +223,10 @@ main {
 .line {
     height: 1px;
     width: 100%;
+    background-color: var(--color-white-40);
+}
+.vertical-line{
+    height: 100px;
+    width: 1px;
     background-color: var(--color-white-40);
 }
