@@ -1,2 +1,19 @@
 @import url('./general.css');
 
+.carousel1 {
+    position: relative;
+    overflow: hidden;
+    justify-content: flex-start;
+    max-width: 95%;
+    padding: 10px 0px;
+}
+.carousel1-view {
+    display: inline-flex;
+    transition: transform 0.3s ease;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.carousel1 .arrow-left, .carousel1 .arrow-right {
+    position: absolute;
+    top: 50%;
+}
