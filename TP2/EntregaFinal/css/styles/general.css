@@ -63,7 +63,7 @@ main {
 }
 
 /* ------------------------------------TEXTOS------------------------------------ */
-.h1-baloo, .h2-baloo, .h3-baloo, .text-baloo, .p-baloo {
+.h1-baloo, .h2-baloo, .h3-baloo, .text-baloo, .p-baloo, .p-10-baloo {
     font-family: 'Baloo 2';
     font-style: normal;
     color: var(--color-white-90);
@@ -103,6 +103,8 @@ main {
 }
 .paragraphs {
     gap: 16px;
+    flex-direction: column;
+    width: 100%;
 }
 .paragraphs p {
     width: 100%;
