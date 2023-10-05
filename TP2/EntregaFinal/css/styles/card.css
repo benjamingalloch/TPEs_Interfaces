@@ -1,34 +1,41 @@
-@import url('./general.css');
-
 .card-regular {
     position: relative;
     display: inline;
-    width: 180px;
+    width: 160px;
+    height: 280px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25); 
     border-radius: 4px;
     overflow: hidden;
 }
 .card-regular .img-container {
     display: block;
-    width: 180px;
-    height: 200px;
+    width: 100%;
+    height: auto;
 }
 .card-regular img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    user-select: none;
 }
 .card-regular .label{
+    background-color: var(--color-dark);
     box-sizing: border-box;
-    position: relative;
+    position: absolute;
     bottom: 0px;
-    min-width: 100%;
+    width: 100%;
     min-height: 110px;
-    display: flex;
+    display: inline-flex;
+    gap: 10px;
     padding: 10px 10px 12px 10px;
     flex-direction: column;
     align-items: center;
     align-items: stretch;
+}
+.card-regular h3 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .card-regular .info{
     display: flex;
@@ -42,14 +49,13 @@
     background-color: var(--color-accent);
 }
 .card-regular .button-class {
-    background-color: var(--color-white-05);
+    background-color: var(--color-white-10);
     padding: 5px;
     min-height: 5px;
     transition: all 0.3s ease;
 }
 .card-regular .like{
     box-sizing: border-box;
-    opacity: 0;
     width: 30px;
     height: 30px;
     padding: 6px;
@@ -58,8 +64,13 @@
     position: absolute;
     right: 0px;
     border-radius: 0px 0px 0px 4px;
-    background-color: var(--color-dark-70);
-    transition: opacity 0.3s ease;
+    transition: all .3s cubic-bezier(.8, .5, .2, 1.4);
+}
+.card-regular .like.liked{
+    background-color: transparent;
+}
+.card-regular .like:not(.liked){
+    opacity: 0;
 }
 .inside-border {
     position: absolute;
@@ -74,13 +85,45 @@
     z-index: 1;
     transition: border-color 0.3s ease;
 }
-  
+.card-regular .button-class.disabled {
+    background-color: var(--color-white-05);
+}
+.card-regular .button-class.disabled p {
+    color: var(--color-white-40) !important;
+}
+.card-regular:hover {
+    cursor: pointer;
+}
 .card-regular:hover .inside-border {
     border-color: var(--color-primary-light-1);
 }
 .card-regular:hover .like {
     opacity: 1;
+    background-color: var(--color-dark-70);
 }
-.card-regular .button-class:hover {
+.card-regular .like:hover svg path{
+    stroke: var(--color-primary-light-2);
+}
+#card-regular-like svg, #card-regular-like svg path{
+    transition: all .3s cubic-bezier(.8, .5, .2, 1.4);
+}
+.card-regular .like.liked svg{
+    fill: var(--color-primary-light-1);
+}
+.card-regular .like.liked path{
+    stroke: var(--color-primary-light-1);
+}
+
+.card-regular .button-class:not(.disabled):hover {
     background-color: var(--color-action-button);
+}
+.card-regular .button-class.disabled:hover {
+    cursor: default;
+}
+
+@media only screen and (min-width: 800px) {
+    .card-regular {
+        width: 200px;
+        height: 320px;
+    }
 }
