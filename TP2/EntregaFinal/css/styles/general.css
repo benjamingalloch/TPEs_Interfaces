@@ -22,6 +22,7 @@
     --color-white-60:rgba(255, 255, 255, 0.60);
     --color-white-40:rgba(255, 255, 255, 0.40);
     --color-white-30:rgba(255, 255, 255, 0.30);
+    --color-white-10:rgba(255, 255, 255, 0.10);
     --color-white-05:rgba(255, 255, 255, 0.05);
 }
 
@@ -64,13 +65,15 @@ main {
 }
 
 /* ------------------------------------TEXTOS------------------------------------ */
-.h1-baloo, .h2-baloo, .h3-baloo, .text-baloo, .p-baloo {
-    font-family: 'Baloo 2';
-    font-style: normal;
-    color: var(--color-white-90);
+.text-hide {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+.h1-baloo, .h2-baloo, .h3-baloo, .text-baloo, .p-baloo, .p-10-baloo {
+    font-family: 'Baloo 2';
+    font-style: normal;
+    color: var(--color-white-90);
 }
 .h1-baloo {
     font-size: 36px;
