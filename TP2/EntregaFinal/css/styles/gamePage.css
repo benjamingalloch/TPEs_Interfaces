@@ -76,6 +76,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: fit-content;
 }
 .video-label {
     display: flex;
@@ -84,7 +85,47 @@
     gap: 2px;
     width: 100%;
 }
+.videoImage {
+    width: 150px;
+}
 
+/* ------------------------------------COMENTARIOS------------------------------------ */
+
+.coment-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2px;
+    width: 100%;
+}
+
+.coment-action {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+}
+
+.coment-action .button-class {
+    background-color: var(--color-white-05);
+    padding: 6px;
+    transition: all 0.3s ease;
+    cursor: auto;
+}
+
+.coment-action .button-class:hover {
+    background-color: var(--color-primary-light-1);
+}
+
+.coment-box input {
+    all: unset;
+    padding: 0px 6px;
+    width: 100%;
+    font-family: 'Baloo 2', cursive;
+    word-wrap: break-word;
+    font-size: 16px;
+    color: var(--color-white-90);
+}
 
 
 
