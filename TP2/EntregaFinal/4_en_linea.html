@@ -24,7 +24,7 @@
                         <img src="./images/PulpGames.png" id="text_logo" class="pad-4" alt="PulpGames">
                     </a>
                 </div>
-            </div>  
+            </div>
         
             <div class="container row flex-center">
                 <!-- CENTRO -->
@@ -55,6 +55,7 @@
     </header>
 
     <main>
+        <!---------------------------------- JUEGO ---------------------------------->
         <div class="container column fill-width">
             <div class="container fill-width">
                 <div class="container grap pad-8">
@@ -71,18 +72,18 @@
                         
                     </div>
                 </div>
-                <div class="container fill-width space-between pad-6-20">
+                <div class="game-screen-label">
                     <h1 class="h1-baloo">4 En Línea</h1>
                     <div class="container gap-24">
                         <div class="container gap-16">
                             <div class="container gap-6">
-                                <img src="./icons/facebook_like.svg" alt="like">
+                                <img class="game-like button-class" src="./icons/facebook_like.svg" alt="like">
                                 <p class="p-baloo">965</p>
                             </div>
-                            <img class="margin-top-5" src="./icons/facebook-dislike.svg" alt="dislike">
+                            <img class="margin-top-5 game-like button-class" src="./icons/facebook-dislike.svg" alt="dislike">
                         </div>
                         <div class="container">
-                            <img src="./icons/little_heart.svg" alt="favotite heart">
+                            <img class="margin-top-2 game-like button-class" src="./icons/little_heart.svg" alt="favotite heart">
                         </div>
                         <img src="./icons/line-vertical.svg" alt="">
                         <div class="container gap-10">
@@ -96,6 +97,7 @@
 
         <div id="content-game-page">
             <section id="game-details-column">
+                <!---------------------------------- SECCION CONTROLES ---------------------------------->
                 <div class='game-detail'>
                     <div class='header-game-detail'>
                         <div class="container space-between fill-width">
@@ -122,6 +124,7 @@
                     </div>
                 </div>
                 
+                <!---------------------------------- SECCION COMO JUGAR ---------------------------------->
                 <div class='game-detail'>
                     <div class='header-game-detail'>
                         <div class="container space-between fill-width">
@@ -152,6 +155,7 @@
                     </div>
                 </div>
 
+                <!---------------------------------- SECCION GAMEPLAYS ---------------------------------->
                 <div class='game-detail'>
                     <div class='header-game-detail'>
                         <div class="container space-between fill-width">
@@ -167,6 +171,7 @@
                     </div>
 
                     <div class='game-detail-content space-between'>
+                        <!---------------- gameplay 1 ---------------->
                         <div class="gameplay-card">
                             <div>
                                 <img class="videoImage" src="./images/gameplay1.jpg" alt="">
@@ -179,7 +184,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        <!---------------- gameplay 2 ---------------->
                         <div class="gameplay-card">
                             <div>
                                 <img class="videoImage" src="./images/gameplay2.jpg" alt="">
@@ -192,7 +197,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        <!---------------- gameplay 3 ---------------->
                         <div class="gameplay-card">
                             <div>
                                 <img class="videoImage" src="./images/gameplay3.png" alt="">
@@ -205,7 +210,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        <!---------------- gameplay 4 ---------------->
                         <div class="gameplay-card">
                             <div>
                                 <img class="videoImage" src="./images/gameplay4.png" alt="">
@@ -218,7 +223,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+                        <!---------------- gameplay 5 ---------------->
                         <div class="gameplay-card">
                             <div>
                                 <img class="videoImage" src="./images/gameplay2.jpg" alt="">
@@ -234,6 +239,46 @@
                     </div>
                 </div>
 
+                <!---------------------------------- SECCION CAPTURAS ---------------------------------->
+                <div class='game-detail'>
+                    <div class='header-game-detail'>
+                        <div class="container space-between fill-width">
+                            <div class='title-game-detail'>
+                                <img src="./icons/gallery.svg" alt="">
+                                <h2 class='h2-baloo'>Capturas</h2>
+                            </div>
+                            <div class="heder-g-detail-action">
+                                 <!-- botton opcional de accion sobre la seccion -->
+                            </div>
+                        </div>
+                        <span class='container line'></span>
+                    </div>
+
+                    <div class='game-detail-content space-between align-start'>
+                        <!-------- CAPTURA 1 -------->
+                        <div class="game-screnshot-box">
+                            <img class="game-screnshot" src="./images/captura1.png" alt="">
+                        </div>
+                        <!-------- CAPTURA 2 -------->
+                        <div class="game-screnshot-box">
+                            <img class="game-screnshot" src="./images/captura2.png" alt="">
+                        </div>
+                        <!-------- CAPTURA 3 -------->
+                        <div class="game-screnshot-box">
+                            <img class="game-screnshot" src="./images/captura1.png" alt="">
+                        </div>
+                        <!-------- CAPTURA 4 -------->
+                        <div class="game-screnshot-box">
+                            <img class="game-screnshot" src="./images/captura2.png" alt="">
+                        </div>
+                        <!-------- CAPTURA 5 -------->
+                        <div class="game-screnshot-box">
+                            <img class="game-screnshot" src="./images/captura1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!---------------------------------- SECCION COMENTARIOS ---------------------------------->
                 <div class='game-detail'>
                     <div class='header-game-detail'>
                         <div class="container space-between fill-width">
@@ -248,19 +293,117 @@
                         </div>
                         <span class='container line'></span>
                     </div>
-                    <div class='game-detail-content container'>
-                        <div class="comment">
+                    <div class='game-detail-content container column gap-10'>
+                        <!---------------- Input nuevo comentario ---------------->
+                        <div class="container fill-width gap-8 align-start">
                             <img src="./icons/avatarDefault.svg" alt="">
-                            <div>
-                                <div class="coment-box">
-                                    <input class="p-baloo" type="text" name="" placeholder="Agrega un comentario..." id="coment">
+                            <div class="container column fill-width gap-4">
+                                <div class="new-comment-box">
+                                    <input class="p-baloo" type="text" name="" placeholder="Agrega un commentario..." id="comment-input">
                                     <span class="line"></span>
                                 </div>
-                                <div class="coment-action">
+                                <div class="new-comment-action">
+                                    <button class="p-baloo button-class" id="comment-btn">Comentar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!---------------- comentario 1 ---------------->
+                        <div class="regular-user-comment">
+                            <div class="user-avatar-container">
+                                <div class="avatar">
+                                    <img src="./images/avatar1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="regular-comment-body">
+                                <div class="container column align-start gap-4">
+                                    <p class="p-10-baloo nameComment">@Estratega23</p>
+                                    <p class="p-baloo">¡Wow, este juego de 4 en línea es adictivamente divertido! Me encanta la interfaz limpia y la facilidad para jugar. Mis partidas siempre están llenas de emoción y estrategia. ¡Ya estoy enganchado! 🎉</p>
+                                </div>
+                                <div class="comment-action container gap-16">
+                                    <div class="container gap-6">
+                                        <img class="comment-like button-class" src="./icons/facebook_like.svg" alt="like">
+                                        <p class="p-baloo">965</p>
+                                    </div>
+                                    <img class="comment-like button-class margin-top-2" src="./icons/facebook-dislike.svg" alt="dislike">
                                     <button class="p-baloo button-class">Responder</button>
                                 </div>
                             </div>
                         </div>
+                        
+                        <!---------------- comentario 2 ---------------->
+                        <div class="regular-user-comment">
+                            <div class="user-avatar-container">
+                                <div class="avatar">
+                                    <img src="./images/avatar2.jpeg" alt="">
+                                </div>
+                            </div>
+                            <div class="regular-comment-body">
+                                <div class="container column align-start gap-4">
+                                    <p class="p-10-baloo nameComment">@benjamingalloc</p>
+                                    <p class="p-baloo">La pagina esta re buena se nota que los que la hicieron son capos. He estado jugando al 4 en línea durante años, y esta versión en línea es genial. Las partidas son rápidas y emocionantes, y me encanta competir contra jugadores de todo el mundo. ¡Si te gustan los juegos de estrategia, este es un imprescindible! 💪🌍 </p>
+                                </div>
+                                <div class="comment-action container gap-16">
+                                    <div class="container gap-6">
+                                        <img class="comment-like button-class" src="./icons/facebook_like.svg" alt="like">
+                                        <p class="p-baloo">965</p>
+                                    </div>
+                                    <img class="comment-like button-class margin-top-2" src="./icons/facebook-dislike.svg" alt="dislike">
+                                    <button class="p-baloo button-class">Responder</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!---------------- comentario 3 ---------------->
+                        <div class="regular-user-comment">
+                            <div class="user-avatar-container">
+                                <div class="avatar">
+                                    <img src="./images/avatar3.png" alt="">
+                                </div>
+                            </div>
+                            <div class="regular-comment-body">
+                                <div class="container column align-start gap-4">
+                                    <p class="p-10-baloo nameComment">@atilioluque</p>
+                                    <p class="p-baloo">LO MEJOR ES EL DISEÑO DE LA PAGINA. Ademas no puedo dejar de elogiar este juego de 4 en línea. La forma en que combina la estrategia con la emoción pura es simplemente impresionante. He estado jugando con amigos y la competencia es feroz, pero eso es lo que lo hace tan emocionante. Cada partida es como un juego de ajedrez acelerado donde cada movimiento cuenta.
+                                        Además, la interfaz es tan intuitiva que incluso los jugadores nuevos pueden sumergirse en el juego sin problemas. Me encanta cómo puedo jugar contra oponentes de todo el mundo, ¡nunca sabes qué estrategia te van a traer!
+                                        En resumen, si buscas un juego que te desafíe, te mantenga enganchado y te permita competir contra jugadores de alto nivel, el 4 en línea es la elección perfecta. ¡No puedo esperar a ver qué sorpresas me depara la próxima partida! 🚀🧠</p>
+                                </div>
+                                <div class="comment-action container gap-16">
+                                    <div class="container gap-6">
+                                        <img class="comment-like button-class" src="./icons/facebook_like.svg" alt="like">
+                                        <p class="p-baloo">965</p>
+                                    </div>
+                                    <img class="comment-like button-class margin-top-2" src="./icons/facebook-dislike.svg" alt="dislike">
+                                    <button class="p-baloo button-class">Responder</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!---------------- comentario 4 ---------------->
+                        <div class="regular-user-comment">
+                            <div class="user-avatar-container">
+                                <div class="avatar">
+                                    <img src="./images/avatar4.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="regular-comment-body">
+                                <div class="container column align-start gap-4">
+                                    <p class="p-10-baloo nameComment">@Martin4EnLinea</p>
+                                    <p class="p-baloo">LO MEJOR ES EL DISEÑO DE LA PAGINA. Ademas no puedo dejar de elogiar este juego de 4 en línea. La forma en que combina la estrategia con la emoción pura es simplemente impresionante. He estado jugando con amigos y la competencia es feroz, pero eso es lo que lo hace tan emocionante. Cada partida es como un juego de ajedrez acelerado donde cada movimiento cuenta.
+                                        Además, la interfaz es tan intuitiva que incluso los jugadores nuevos pueden sumergirse en el juego sin problemas. Me encanta cómo puedo jugar contra oponentes de todo el mundo, ¡nunca sabes qué estrategia te van a traer!
+                                        En resumen, si buscas un juego que te desafíe, te mantenga enganchado y te permita competir contra jugadores de alto nivel, el 4 en línea es la elección perfecta. ¡No puedo esperar a ver qué sorpresas me depara la próxima partida! 🚀🧠</p>
+                                </div>
+                                <div class="comment-action container gap-16">
+                                    <div class="container gap-6">
+                                        <img class="comment-like button-class" src="./icons/facebook_like.svg" alt="like">
+                                        <p class="p-baloo">7</p>
+                                    </div>
+                                    <img class="comment-like button-class margin-top-2" src="./icons/facebook-dislike.svg" alt="dislike">
+                                    <button class="p-baloo button-class">Responder</button>
+                                </div>
+                            </div>
+                        </div>
+        
                         
                     </div>
                 </div>
@@ -394,5 +537,6 @@
     </footer>
     
     <script type="text/javascript" src="./js/burger-icon.js"></script>
+    <script type="text/javascript" src="./js/comment-input.js"></script>
 </body>
 </html>

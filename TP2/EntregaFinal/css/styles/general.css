@@ -9,6 +9,7 @@
 
     --color-accent: #00A750;
     --color-action-button: #3EA6FF;
+    --color-action-button-1: #1193FF;
     --color-error: #C90000;
 
     --color-dark:rgba(34, 34, 34);
@@ -256,6 +257,9 @@ main {
 .gap-4 {
     gap: 4px;
 }
+.gap-2 {
+    gap: 2px;
+}
 
 .button-class {
     border-radius: 1000px;
@@ -273,6 +277,9 @@ main {
 }
 .margin-top-5 {
     margin-top: 5px;
+}
+.margin-top-2 {
+    margin-top: 2px;
 }
 .margin-bott-5 {
     margin-bottom: 5px;
