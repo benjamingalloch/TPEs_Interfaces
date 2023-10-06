@@ -58,7 +58,7 @@ body {
 main {
     min-height: 50vh;
     display: flex;
-    padding: 48px 32px;
+    padding: 50px 32px;
     flex-direction: column;
     align-items: center;
     gap: 28px;
@@ -285,5 +285,9 @@ main {
     margin-bottom: 5px;
 }
 
-
+@media only screen and (min-width: 800px) {
+    main {
+        padding: 50px 64px;
+    }
+}
 
