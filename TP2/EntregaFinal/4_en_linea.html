@@ -58,35 +58,37 @@
         <!---------------------------------- JUEGO ---------------------------------->
         <div class="container column fill-width">
             <div class="container fill-width">
+                <!-------------- Breadcrumbs ---------------->
                 <div class="container grap pad-8">
-                    <p class="p-baloo light-80">Inicio</p>
+                    <a href="./home.html" class="p-baloo breadcrumb">Inicio</a>
                     <img src="./icons/Little_arrow_right.svg" alt="flecha">
-                    <p class="p-baloo light-80">Estrategia</p>
+                    <a class="p-baloo breadcrumb" >Estrategia</a>
                     <img src="./icons/Little_arrow_right.svg" alt="flecha">
                     <p class="p-baloo bold">4 en línea</p>
                 </div>
             </div>
             <div class="container column fill-width">
-                <div id="gameBackground" class="container fill-width ">
+                <div id="game-background" class="container fill-width ">
                     <div id="gameScreen">
-                        
+                        <!-------- PONER JUEGO ACA ------->
                     </div>
                 </div>
+                <!------------------------- GAME LABEL --------------------------->
                 <div class="game-screen-label">
                     <h1 class="h1-baloo">4 En Línea</h1>
                     <div class="container gap-24">
                         <div class="container gap-16">
                             <div class="container gap-6">
-                                <img class="game-like button-class" src="./icons/facebook_like.svg" alt="like">
+                                <img class="game-label-btn button-class" src="./icons/facebook_like.svg" alt="like">
                                 <p class="p-baloo">965</p>
                             </div>
-                            <img class="margin-top-5 game-like button-class" src="./icons/facebook-dislike.svg" alt="dislike">
+                            <img class="margin-top-5 game-label-btn button-class" src="./icons/facebook-dislike.svg" alt="dislike">
                         </div>
                         <div class="container">
-                            <img class="margin-top-2 game-like button-class" src="./icons/little_heart.svg" alt="favotite heart">
+                            <img class="margin-top-2 game-label-btn button-class" src="./icons/little_heart.svg" alt="favotite heart">
                         </div>
                         <img src="./icons/line-vertical.svg" alt="">
-                        <div class="container gap-10">
+                        <div class="share-btn game-label-btn button-class" >
                             <img class="margin-bott-5" src="./icons/share_icon.svg" alt="compartir icono">
                             <p class="h3-baloo light-80">Compartir</p>
                         </div>
@@ -254,26 +256,43 @@
                         <span class='container line'></span>
                     </div>
 
-                    <div class='game-detail-content space-between align-start'>
-                        <!-------- CAPTURA 1 -------->
-                        <div class="game-screnshot-box">
-                            <img class="game-screnshot" src="./images/captura1.png" alt="">
+                    <div class='game-detail-content space-between align-center'>
+                        <div class="grilla-capturas">
+                            <div>
+                                <img src="./images/captura1.png" alt="">
+                            </div>
+                            <!-------- CAPTURA 2 -------->
+                            <div>
+                                <img src="./images/captura2.png" alt="">
+                            </div>
+                            <!-------- CAPTURA 3 -------->
+                            <div>
+                                <img src="./images/captura1.png" alt="">
+                            </div>
+                            <!-------- CAPTURA 4 -------->
+                            <div>
+                                <img src="./images/captura2.png" alt="">
+                            </div>
+                            <!-------- CAPTURA 5 -------->
+                            <div>
+                                <img src="./images/captura1.png" alt="">
+                            </div>
                         </div>
-                        <!-------- CAPTURA 2 -------->
-                        <div class="game-screnshot-box">
-                            <img class="game-screnshot" src="./images/captura2.png" alt="">
-                        </div>
-                        <!-------- CAPTURA 3 -------->
-                        <div class="game-screnshot-box">
-                            <img class="game-screnshot" src="./images/captura1.png" alt="">
-                        </div>
-                        <!-------- CAPTURA 4 -------->
-                        <div class="game-screnshot-box">
-                            <img class="game-screnshot" src="./images/captura2.png" alt="">
-                        </div>
-                        <!-------- CAPTURA 5 -------->
-                        <div class="game-screnshot-box">
-                            <img class="game-screnshot" src="./images/captura1.png" alt="">
+
+                        <div class="overlay" id="overlay">
+                            <svg class="cerrar" width="35" height="35" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.1982 4.15646C4.99098 4.15651 4.78848 4.21837 4.61659 4.33411C4.44471 4.44985 4.31125 4.61423 4.23327 4.80622C4.15529 4.99821 4.13635 5.2091 4.17885 5.41191C4.22135 5.61473 4.32338 5.80026 4.47188 5.94479L11.0271 12.5L4.47188 19.0551C4.37191 19.1511 4.29209 19.2661 4.23711 19.3933C4.18212 19.5205 4.15308 19.6574 4.15167 19.796C4.15026 19.9346 4.17651 20.0721 4.2289 20.2004C4.28128 20.3287 4.35874 20.4453 4.45674 20.5433C4.55474 20.6413 4.67131 20.7187 4.79961 20.7711C4.92792 20.8235 5.0654 20.8497 5.20398 20.8483C5.34256 20.8469 5.47947 20.8179 5.60669 20.7629C5.73391 20.7079 5.84888 20.6281 5.94486 20.5281L12.5 13.9729L19.0552 20.5281C19.1512 20.6281 19.2662 20.7079 19.3934 20.7629C19.5206 20.8179 19.6575 20.8469 19.7961 20.8483C19.9347 20.8498 20.0722 20.8235 20.2005 20.7711C20.3288 20.7187 20.4453 20.6413 20.5433 20.5433C20.6413 20.4453 20.7188 20.3287 20.7712 20.2004C20.8236 20.0721 20.8498 19.9346 20.8484 19.796C20.847 19.6574 20.818 19.5205 20.763 19.3933C20.708 19.2661 20.6282 19.1511 20.5282 19.0551L13.973 12.5L20.5282 5.94479C20.6787 5.79847 20.7815 5.6101 20.8232 5.40435C20.8648 5.1986 20.8433 4.98507 20.7615 4.79175C20.6796 4.59844 20.5413 4.43434 20.3647 4.32098C20.188 4.20762 19.9812 4.15027 19.7714 4.15646C19.5007 4.16452 19.2439 4.27763 19.0552 4.47181L12.5 11.027L5.94486 4.47181C5.84779 4.37202 5.7317 4.2927 5.60346 4.23854C5.47521 4.18438 5.33741 4.15647 5.1982 4.15646Z" fill="white"/>
+                                                        </svg>
+                            <svg class="captura-arrow left" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1027_6750)"><path d="M24.2374 4.3604C23.5228 3.64582 22.3707 3.64582 21.6562 4.3604L9.5374 16.4792C8.96865 17.0479 8.96865 17.9667 9.5374 18.5354L21.6562 30.6542C22.3707 31.3687 23.5228 31.3687 24.2374 30.6542C24.952 29.9396 24.952 28.7875 24.2374 28.0729L13.6791 17.5L24.252 6.92707C24.952 6.22707 24.952 5.0604 24.2374 4.3604Z" fill="white"/></g><defs><clipPath id="clip0_1027_6750"><rect width="35" height="35" fill="white"/></clipPath></defs> </svg>
+            
+                            <svg class="captura-arrow right" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1027_6753)"><path d="M10.7624 30.6396C11.477 31.3542 12.629 31.3542 13.3436 30.6396L25.4624 18.5209C26.0311 17.9521 26.0311 17.0334 25.4624 16.4646L13.3436 4.34587C12.629 3.63129 11.477 3.63129 10.7624 4.34587C10.0478 5.06046 10.0478 6.21254 10.7624 6.92712L21.3207 17.5L10.7478 28.073C10.0478 28.773 10.0478 29.9396 10.7624 30.6396Z" fill="white"/></g> <defs><clipPath id="clip0_1027_6753"><rect width="35" height="35" fill="white"/></clipPath> </defs></svg>
+                                                                   
+                        </div>     
+
+                        <div class="ampliacion" id="ampliacion">
+                            
+                                
+                            
+                            <img src="" alt="Imagen Ampliada">
                         </div>
                     </div>
                 </div>
@@ -538,5 +557,6 @@
     
     <script type="text/javascript" src="./js/burger-icon.js"></script>
     <script type="text/javascript" src="./js/comment-input.js"></script>
+    <script type="text/javascript" src="./js/ampliar-captura.js"></script>
 </body>
 </html>
