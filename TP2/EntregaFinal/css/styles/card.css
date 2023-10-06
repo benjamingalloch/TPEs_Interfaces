@@ -27,6 +27,7 @@
     min-height: 110px;
     display: inline-flex;
     gap: 10px;
+    justify-content: space-between;
     padding: 10px 10px 12px 10px;
     flex-direction: column;
     align-items: center;
@@ -67,7 +68,13 @@
     transition: all .3s cubic-bezier(.8, .5, .2, 1.4);
 }
 .card-regular .like.liked{
-    background-color: transparent;
+    width: 28px;
+    height: 28px;
+    padding: 5px;
+    padding-top: 6px;
+    margin-top: 6px;
+    margin-right: 6px;
+    border-radius: 100px;
 }
 .card-regular .like:not(.liked){
     opacity: 0;
@@ -104,7 +111,7 @@
 .card-regular .like:hover svg path{
     stroke: var(--color-primary-light-2);
 }
-#card-regular-like svg, #card-regular-like svg path{
+.card-regular-like svg, .card-regular-like svg path{
     transition: all .3s cubic-bezier(.8, .5, .2, 1.4);
 }
 .card-regular .like.liked svg{
@@ -112,6 +119,9 @@
 }
 .card-regular .like.liked path{
     stroke: var(--color-primary-light-1);
+}
+.card-regular .like.liked {
+    background-color: var(--color-dark-70);
 }
 
 .card-regular .button-class:not(.disabled):hover {

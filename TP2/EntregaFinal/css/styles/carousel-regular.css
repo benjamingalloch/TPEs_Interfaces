@@ -1,0 +1,54 @@
+@import url('./general.css');
+
+.carousel-regular {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 280px;
+    padding: 10px 0px;
+}
+.carousel-regular-view {
+    position: absolute;
+    display: flex;
+    transition: transform 0.3s ease;
+    justify-content: flex-start;
+    gap: 20px;
+    z-index: 0;
+    transition: transform .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.carousel-regular .arrow-left, .carousel-regular .arrow-right {
+    background: linear-gradient(90deg, #222 0%, rgba(34, 34, 34, 0.70) 100%);
+    height: 280px;
+    width: 40px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transition: box-shadow 0.3s ease;
+}
+.carousel-regular .arrow-right {
+    background: linear-gradient(90deg, rgba(34, 34, 34, 0.70) 0.01%, #222 99.99%);
+    right: 0px;
+}
+.carousel-regular .arrow-left:hover {
+    box-shadow: 2px -1px 6px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+.carousel-regular .arrow-right:hover {
+    box-shadow: -2px -1px 6px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+.hidden {
+    display: none !important;
+}
+@media only screen and (min-width: 800px){
+    .carousel-regular .arrow-left, .carousel-regular .arrow-right {
+        height: 320px;
+    }
+    .carousel-regular {
+        height: 320px;
+    }
+}
+

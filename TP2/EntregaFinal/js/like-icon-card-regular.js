@@ -1,4 +1,8 @@
-const like = document.getElementById('card-regular-like');
-like.addEventListener('click', (event) =>{
-    like.classList.toggle('liked');
+const likes = document.querySelectorAll('.card-regular-like');
+
+likes.forEach(like => {
+    like.addEventListener('click', (event) => {
+        like.classList.toggle('liked');
+    });
 });
+
