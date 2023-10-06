@@ -1,4 +1,20 @@
-@import url('./general.css');
+.box-carousel-regular {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 2px;
+}
+.box-carousel-regular .header-category .line {
+    margin-top: 6px;
+}
+
+.box-carousel-regular .header-category .button-class {
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.box-carousel-regular .header-category .button-class:hover {
+    padding: 6px 10px;
+    background-color: var(--color-white-10);
+}
 
 .carousel-regular {
     display: flex;

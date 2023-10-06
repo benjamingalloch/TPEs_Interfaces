@@ -19,7 +19,7 @@ carousel_r.forEach(carousel => {
     
         arrowRight.classList.remove("hidden");
 
-        const new_pos = posX + ((card_width + 20) * 4);
+        const new_pos = posX + ((card_width + 20) * 3);
     
         if (posX < 0) {
             if (new_pos >= 0) {
@@ -46,7 +46,7 @@ carousel_r.forEach(carousel => {
         
         arrowLeft.classList.remove("hidden");
 
-        const new_pos = posX - ((card_width + 20) * 4);
+        const new_pos = posX - ((card_width + 20) * 3);
 
         const sizeRestante = (parseInt(view_styles.width) - carouselWidth - Math.abs(posX));
 

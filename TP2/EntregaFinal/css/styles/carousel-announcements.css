@@ -1,0 +1,31 @@
+@import url('./general.css');
+
+.carousel-announcemnts {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: 500px;
+    overflow: hidden;
+}
+.carousel-announcemnts-view {
+    position: absolute;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 400%;
+
+    transform: translateX(-50%);
+}
+.item-announcement{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.item-announcement img {
+    width: calc(100%);
+    object-fit: cover;
+    user-select: none;
+}

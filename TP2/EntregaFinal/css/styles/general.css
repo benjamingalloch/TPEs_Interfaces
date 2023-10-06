@@ -58,11 +58,16 @@ body {
 main {
     min-height: 50vh;
     display: flex;
-    padding: 50px 32px;
+    padding: 50px 16px;
     flex-direction: column;
     align-items: center;
     gap: 28px;
     align-self: stretch;
+}
+#background {
+    height: 400px;
+    background-image: url("../../images/Background.jpg");
+    opacity: 0.7;
 }
 
 /* ------------------------------------TEXTOS------------------------------------ */
@@ -288,6 +293,9 @@ main {
 @media only screen and (min-width: 800px) {
     main {
         padding: 50px 64px;
+    }
+    #background {
+        height: 500px;
     }
 }
 
