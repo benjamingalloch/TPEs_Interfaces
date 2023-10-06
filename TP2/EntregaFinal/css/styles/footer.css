@@ -20,3 +20,7 @@
     color: var(--color-white-80);
     padding-bottom: 2px;
 }
+#footer li:hover {
+    color: var(--color-white-90);
+    cursor: pointer;
+}
