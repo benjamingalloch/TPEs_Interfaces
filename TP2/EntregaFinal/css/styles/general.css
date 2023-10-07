@@ -64,11 +64,6 @@ main {
     gap: 28px;
     align-self: stretch;
 }
-#background {
-    height: 400px;
-    background-image: url("../../images/Background.jpg");
-    opacity: 0.7;
-}
 
 /* ------------------------------------TEXTOS------------------------------------ */
 .text-hide {
@@ -293,12 +288,44 @@ main {
     cursor: pointer;
 }
 
+/* CARRUSEL DE CATEGORIAS */
+.category-container-carousel {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 300px;
+    max-width: 1100px;
+}
+.category-carousel-view {
+    position: absolute;
+    width: 100%;
+}
+.category-container-carousel img {
+    height: 100%;
+    object-fit: cover;
+}
+.category-container-carousel .arrow-right, .category-container-carousel .arrow-left {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+}
+.category-container-carousel .arrow-right {
+    background: linear-gradient(90deg, rgba(34, 34, 34, 0.70) 0.01%, #222 99.99%);
+    right: 0;
+}
+.category-container-carousel .arrow-left {
+    background: linear-gradient(90deg, #222 0%, rgba(34, 34, 34, 0.70) 100%);
+    left: 0;
+}
+
+
 @media only screen and (min-width: 800px) {
     main {
         padding: 50px 64px;
-    }
-    #background {
-        height: 500px;
     }
 }
 
