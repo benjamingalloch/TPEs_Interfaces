@@ -53,7 +53,7 @@
                         <h3 class="h3-baloo not-bold dark pad-4">Mis favoritos</h3>
                     </div>
                 </div>
-                <div class="container">
+                <div class="container" id="cart">
                     <img src="./icons/cart.svg" alt="Mi colección" />
                 </div>
                 <div class="container">
@@ -62,17 +62,38 @@
             </div>
         </nav>
     </header>
-    <div id="background">
-
-    </div>
 
     <main>
-        <div class="carousel-announcemnts">
-            <div class="carousel-announcemnts-view">
-                
+        <div id="background">
+            <div class="carousel-announcemnts">
+                <div class="arrow-right">
+                    <svg width="29" height="48" viewBox="0 0 29 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.41269 43.7727C0.632241 42.9922 0.631551 41.7271 1.41115 40.9458L16.9104 25.4127C17.6894 24.632 17.6894 23.368 16.9104 22.5873L1.41114 7.05421C0.63155 6.27291 0.632241 5.00777 1.41269 4.22733L4.2258 1.41421C5.00685 0.633165 6.27318 0.633165 7.05423 1.41421L28.2258 22.5858C29.0068 23.3668 29.0068 24.6332 28.2258 25.4142L7.05423 46.5858C6.27318 47.3668 5.00685 47.3668 4.2258 46.5858L1.41269 43.7727Z" 
+                        fill="white" fill-opacity="0.7"/>
+                    </svg>
+                </div>
+                <div class="arrow-left">
+                    <svg width="29" height="48" viewBox="0 0 29 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M28.2273 4.22733C29.0078 5.00777 29.0085 6.27291 28.2289 7.05421L12.7296 22.5873C11.9506 23.368 11.9506 24.632 12.7296 25.4127L28.2289 40.9458C29.0085 41.7271 29.0078 42.9922 28.2273 43.7727L25.4142 46.5858C24.6332 47.3668 23.3668 47.3668 22.5858 46.5858L1.41421 25.4142C0.633165 24.6332 0.633165 23.3668 1.41421 22.5858L22.5858 1.41421C23.3668 0.633165 24.6332 0.633165 25.4142 1.41421L28.2273 4.22733Z" 
+                        fill="white" fill-opacity="0.7"/>
+                    </svg>
+                </div>
+                <div class="carousel-announcemnts-view">
+                    <div class="item-announcement">
+                        <img src="./images/announce_1.png" alt="">
+                    </div>
+                    <div class="item-announcement">
+                        <img src="./images/announce_2.png" alt="">
+                    </div>
+                    <div class="item-announcement">
+                        <img src="./images/announce_3.png" alt="">
+                    </div>
+                    <div class="item-announcement">
+                        <img src="./images/announce_4.png" alt="">
+                    </div>
+                </div>
             </div>
         </div>
-
 
         <div class="box-carousel-regular">
             <div class='header-category'>
@@ -443,8 +464,22 @@
             </div>
         </div>
         
+        <div class="category-container-carousel">
+            <div class="category-carousel-view">
+                <div class="arrow-left  ">
+                    <svg width="18" height="30" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.1123 2.11233C17.8928 2.89277 17.8935 4.15791 17.1139 4.93921L8.48459 13.5873C7.7056 14.368 7.7056 15.632 8.48459 16.4127L17.1139 25.0608C17.8935 25.8421 17.8928 27.1072 17.1123 27.8877L16.4142 28.5858C15.6332 29.3668 14.3668 29.3668 13.5858 28.5858L1.41421 16.4142C0.633166 15.6332 0.633165 14.3668 1.41421 13.5858L13.5858 1.41421C14.3668 0.633166 15.6332 0.633165 16.4142 1.41421L17.1123 2.11233Z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="arrow-right">
+                    <svg width="18" height="30" viewBox="0 0 18 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.4127 27.8877C0.63225 27.1072 0.631561 25.8421 1.41116 25.0608L10.0404 16.4127C10.8194 15.632 10.8194 14.368 10.0404 13.5873L1.41116 4.93921C0.631561 4.15792 0.63225 2.89277 1.4127 2.11233L2.11081 1.41421C2.89186 0.633164 4.15819 0.633165 4.93924 1.41421L17.1108 13.5858C17.8919 14.3668 17.8919 15.6332 17.1108 16.4142L4.93924 28.5858C4.15819 29.3668 2.89186 29.3668 2.11081 28.5858L1.4127 27.8877Z" fill="white"/>
+                    </svg>
+                </div>
+                <img src="./images/categories.png" alt="">
+            </div>
+        </div>
         
-
     </main>
 
     <footer id="footer" class="container column gap-18">
@@ -563,6 +598,7 @@
     </footer>
 
     <script type="text/javascript" src="./js/carousel-regular.js"></script>
+    <script type="text/javascript" src="./js/carousel-announcements.js"></script>
     <script type="text/javascript" src="./js/burger-icon.js"></script>
     <script type="text/javascript" src="./js/like-icon-card-regular.js"></script>
 </body>

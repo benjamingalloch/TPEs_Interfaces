@@ -1,11 +1,15 @@
 #header {
     position: fixed;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
     top: 0;
     width: 100%;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25); 
     z-index: 99;
 }
 .navbar {
+    width: 100%;
     padding: 0px 20px;
     background-color: var(--color-primary);
     display: grid;
@@ -53,7 +57,10 @@
     opacity: 0;
     height: 50px;
 }
-#favoritos h3{
+#favoritos{
+    display: none;
+}
+#cart {
     display: none;
 }
 
@@ -167,8 +174,10 @@
     .search-bar button, .search-bar input {
         display: block;
     }
-    #favoritos h3{
+    #favoritos {
         display: flex;
     }
-
+    #cart {
+        display: block;
+    }
 }
