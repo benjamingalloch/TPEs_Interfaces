@@ -284,6 +284,9 @@ main {
 .margin-bott-5 {
     margin-bottom: 5px;
 }
+.social-icon:hover {
+    cursor: pointer;
+}
 
 /* CARRUSEL DE CATEGORIAS */
 .category-container-carousel {
