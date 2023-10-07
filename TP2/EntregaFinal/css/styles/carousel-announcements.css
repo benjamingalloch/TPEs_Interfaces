@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    height: 250px;
     width: 100vw;
     background-image: url("../../images/Background.jpg");
     background-size: cover;
@@ -20,6 +20,7 @@
     width: 90%;
     height: calc(100% - 50px) !important;
     max-width: 1000px;
+    cursor: pointer;
 
     overflow: auto;
     scrollbar-width: thin;

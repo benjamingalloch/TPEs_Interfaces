@@ -3,7 +3,7 @@ const view = carousel.querySelector('.carousel-announcemnts-view');
 const arrowLeft = carousel.querySelector('.arrow-left');
 const arrowRight = carousel.querySelector('.arrow-right');
 
-arrowLeft.addEventListener('click', event => {
+function moveCarouselLeft() {
     const styles = window.getComputedStyle(view);
     const transformValue = styles.getPropertyValue('transform');
 
@@ -14,16 +14,16 @@ arrowLeft.addEventListener('click', event => {
     const translateXPercentage = Math.round((translateX / containerWidth) * 100);
 
     const movement = 25;
-    const newTranslate = translateXPercentage + movement
+    const newTranslate = translateXPercentage + movement;
 
     if (newTranslate <= 0){
         view.style.transform = `translateX(${newTranslate}%)`;
-    } else (
-        view.style.transform = 'translateX(-75%)'
-    )
-});
+    } else {
+        view.style.transform = 'translateX(-75%)';
+    }
+}
 
-arrowRight.addEventListener('click', event => {
+function moveCarouselRight() {
     const styles = window.getComputedStyle(view);
     const transformValue = styles.getPropertyValue('transform');
 
@@ -38,7 +38,32 @@ arrowRight.addEventListener('click', event => {
 
     if (newTranslate >= -75){
         view.style.transform = `translateX(${newTranslate}%)`;
-    } else (
-        view.style.transform = 'translateX(0%)'
-    )
-});
+    } else {
+        view.style.transform = 'translateX(0%)';
+    }
+}
+
+arrowLeft.addEventListener('click', moveCarouselLeft);
+arrowRight.addEventListener('click', moveCarouselRight);
+
+let intervalId
+function startAutomaticScroll() {
+    intervalId = setInterval(moveCarouselRight, 3000);
+}
+function stopAutomaticScroll() {
+    clearInterval(intervalId);
+}
+
+function handleMouseOver() {
+    stopAutomaticScroll();
+}
+
+function handleMouseOut() {
+    startAutomaticScroll();
+}
+
+
+carousel.addEventListener('mouseover', handleMouseOver);
+carousel.addEventListener('mouseout', handleMouseOut);
+
+startAutomaticScroll();

@@ -10,6 +10,8 @@ carousel_r.forEach(carousel => {
         const card_width = document.querySelector('.card-regular').offsetWidth;
         const computedStyles = window.getComputedStyle(view);
         const transformValue = computedStyles.transform;
+
+        const carouselWidth = carousel.offsetWidth;
         let posX = 0;
     
         if (transformValue && transformValue !== 'none') {
@@ -19,7 +21,9 @@ carousel_r.forEach(carousel => {
     
         arrowRight.classList.remove("hidden");
 
-        const new_pos = posX + ((card_width + 20) * 3);
+        const new_pos = posX + (carouselWidth - (card_width + 60));
+        console.log(new_pos);
+        console.log(posX);
     
         if (posX < 0) {
             if (new_pos >= 0) {
@@ -46,12 +50,14 @@ carousel_r.forEach(carousel => {
         
         arrowLeft.classList.remove("hidden");
 
-        const new_pos = posX - ((card_width + 20) * 3);
+        const new_pos = posX - (carouselWidth - (card_width + 60));
 
         const sizeRestante = (parseInt(view_styles.width) - carouselWidth - Math.abs(posX));
 
         if (sizeRestante > 0){
-            if (Math.abs(new_pos) > sizeRestante) {
+            console.log(new_pos);
+            console.log(sizeRestante);
+            if ((Math.abs(new_pos)) > sizeRestante) {
                 view.style.transform = `translateX(${posX - sizeRestante - 4}px)`;
                 arrowRight.classList.add("hidden");
             } else {

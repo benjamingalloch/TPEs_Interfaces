@@ -12,6 +12,8 @@
     --color-action-button-1: #1193FF;
     --color-error: #C90000;
 
+    --color-dark-section:rgb(44, 44, 44);
+
     --color-dark:rgba(34, 34, 34);
     --color-dark-70:rgba(34, 34, 34, 0.70);
     --color-dark-50:rgba(34, 34, 34, 0.50);
@@ -61,7 +63,7 @@ main {
     padding: 50px 16px;
     flex-direction: column;
     align-items: center;
-    gap: 28px;
+    gap: 40px;
     align-self: stretch;
 }
 
@@ -288,6 +290,7 @@ main {
     cursor: pointer;
 }
 
+
 /* CARRUSEL DE CATEGORIAS */
 .category-container-carousel {
     position: relative;
@@ -295,7 +298,8 @@ main {
     overflow: hidden;
     width: 100%;
     height: 300px;
-    max-width: 1100px;
+    max-width: 1200px;
+    margin: 8px 0;
 }
 .category-carousel-view {
     position: absolute;
@@ -323,9 +327,67 @@ main {
 }
 
 
+/* SECCION DESTACADOS */
+.box-cards-featured {
+    background-color: var(--color-dark-section);
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px 10px;
+    border-radius: 4px;
+}
+.box-cards-featured .header-featured {
+    padding-bottom: 16px;
+    width: 100%;
+    justify-content: space-between;
+}
+.box-cards-featured 
+.header-featured 
+.title-game-detail svg{
+    transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.box-cards-featured 
+.header-featured 
+.title-game-detail {
+    cursor: pointer;
+}
+.box-cards-featured 
+.header-featured 
+.title-game-detail:hover 
+svg {
+    padding-left: 10px;
+
+}
+.box-cards-featured .card-regular{
+    box-shadow: none;
+}
+.box-cards-featured .card-regular .label{
+    min-height: auto;
+    background-color: var(--color-dark-section);
+}
+.box-cards-featured .featured-content {
+    display: flex;
+    max-height: 300px;
+    justify-content: space-between;
+    gap: 2%;
+}
+.box-cards-featured .featured-content .card-regular{
+    width: fit-content;
+    height: auto;
+}
+
 @media only screen and (min-width: 800px) {
     main {
         padding: 50px 64px;
     }
+    .box-cards-featured .featured-content {
+        gap: 4%;
+    }
+    .box-cards-featured {
+        padding: 20px 30px;
+    }
+
 }
 

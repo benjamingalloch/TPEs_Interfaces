@@ -60,6 +60,9 @@
 #favoritos{
     display: none;
 }
+#favoritos h3 {
+    padding-left: 4px;
+}
 #cart {
     display: none;
 }
