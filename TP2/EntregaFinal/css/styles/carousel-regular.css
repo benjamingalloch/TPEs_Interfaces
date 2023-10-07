@@ -5,6 +5,9 @@
     flex-direction: column;
     gap: 2px;
 }
+.box-carousel-regular .header-category {
+    max-width: 100%;
+}
 .box-carousel-regular .header-category .line {
     margin-top: 6px;
 }

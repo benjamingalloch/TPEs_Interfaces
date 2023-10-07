@@ -9,8 +9,8 @@
     background-image: url("../../images/Background.jpg");
     background-size: cover;
     background-position: center;
-    box-shadow: inset 0px 100px 100px rgba(34, 34, 34, 0.8)
-    , inset 0px -100px 100px rgba(34, 34, 34, 0.8);
+    box-shadow: inset 0px 50 100px rgba(34, 34, 34, 0.8)
+    , inset 0px -50px 100px rgba(34, 34, 34, 1);
     
 }
 .carousel-announcemnts {
@@ -31,7 +31,6 @@
 .carousel-announcemnts::-webkit-scrollbar-track {
     background-color: transparent;
 }
-
 .carousel-announcemnts::-webkit-scrollbar-thumb {
     background-color: transparent;
 }

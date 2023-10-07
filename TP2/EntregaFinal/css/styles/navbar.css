@@ -178,6 +178,6 @@
         display: flex;
     }
     #cart {
-        display: block;
+        display: flex;
     }
 }

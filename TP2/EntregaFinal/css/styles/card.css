@@ -55,6 +55,12 @@
     min-height: 5px;
     transition: all 0.3s ease;
 }
+#old-price {
+    min-height: 10px;
+}
+.owned {
+    color: var(--color-accent) !important;
+}
 .card-regular .like{
     box-sizing: border-box;
     width: 30px;
@@ -123,7 +129,6 @@
 .card-regular .like.liked {
     background-color: var(--color-dark-70);
 }
-
 .card-regular .button-class:not(.disabled):hover {
     background-color: var(--color-action-button);
 }
