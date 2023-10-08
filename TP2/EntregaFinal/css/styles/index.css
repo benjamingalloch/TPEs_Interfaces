@@ -1,11 +1,12 @@
-body, html {
+.index-body, .index-body html {
     height: 100%;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0px !important;
 }
-.index-main {
+.index-body main {
     padding: 0px;
 }
 .index-view {
@@ -46,17 +47,20 @@ body, html {
     height: 100%;
     object-fit: cover;
 }
-.log-in-optios {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.index-forms {
     width: 470px;
     height: 100%;
     background-color: var(--color-white);
     border-radius: 30px;
     transition: all 0.5s ease;
-
+}
+.log-in-optios, .register-options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
 .login-fields-container {
     display: flex;
@@ -78,14 +82,8 @@ body, html {
     justify-content: center;
     gap: 10px;
 }
-.login-options {
-    display: flex;
-    padding-bottom: 0px;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    flex: 1 0 0;
-}
+
+
 .login-opt-conteiner {
     display: flex;
     width: 400px;
@@ -141,4 +139,7 @@ body, html {
     cursor: pointer;
 }
 
-/* ------------------------animacion------------------------- */
+/* ------------------------animaciones------------------------- */
+.hidden {
+    display: none;
+}
