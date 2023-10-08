@@ -78,11 +78,6 @@ main {
     font-style: normal;
     color: var(--color-white-90);
 }
-.h1-baloo, .h2-baloo, .h3-baloo, .text-baloo, .p-baloo, .p-10-baloo {
-    font-family: 'Baloo 2';
-    font-style: normal;
-    color: var(--color-white-90);
-}
 .h1-baloo {
     font-size: 36px;
     line-height: 36px;
@@ -358,7 +353,6 @@ main {
 .title-game-detail:hover 
 svg {
     padding-left: 10px;
-
 }
 .box-cards-featured .card-regular{
     box-shadow: none;
@@ -378,6 +372,46 @@ svg {
     height: auto;
 }
 
+
+/* BANNER */
+.extra-announce {
+    background-image: url('../../images/banner_background.png');
+    background-size: cover;
+    height: 200px;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 4px;
+    padding-right: 250px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 20px 0px;
+}
+.extra-announce .image-box {
+    position: absolute;
+    right: -60px;
+    bottom: -96px;
+    width: 370px;
+}
+.extra-announce .image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.extra-announce .content {
+    flex-direction: column;
+    gap: 28px;
+}
+.extra-announce .button-class {
+    background-color: var(--color-action-button);
+    padding: 6px 16px;
+}
+.extra-announce .button-class:hover {
+    background-color: var(--color-action-button-1);
+}
+
 @media only screen and (min-width: 800px) {
     main {
         padding: 50px 64px;
@@ -388,6 +422,14 @@ svg {
     .box-cards-featured {
         padding: 20px 30px;
     }
-
+    .extra-announce .image-box {
+        position: absolute;
+        right: -60px;
+        bottom: -116px;
+        width: 470px;
+    }
+    .extra-announce .content {
+        flex-direction: row;
+    }
 }
 
