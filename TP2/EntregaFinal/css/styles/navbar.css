@@ -137,22 +137,61 @@
     position: fixed;
     border-right: 1px solid var(--color-white-40);
     display: flex;
-    padding: 10px 0px;
+    padding: 10px 20px;
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
     top: 50px;
-    left: -2px;
-    width: 0px;
+    left: -202px;
+    width: 200px;
     height: 100vh;
     box-sizing: border-box;
     z-index: 3;
     transition: .3s cubic-bezier(.8, .5, .2, 1.4);
 }
 #menu-options.open {
-    width: 200px;
     left: 0px;
     transition-delay: 50ms;
+}
+.option {
+    display: flex;
+    gap: 20px;
+}
+#menu-options .option {
+    position: relative;
+    align-items: center;
+    width: 100%;
+}
+#menu-options .option p {
+    color: var(--color-white-80) !important;
+}
+.menu-options-section {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid var(--color-white-40);
+    box-sizing: border-box;
+    gap: 12px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+.option p {
+    position: absolute;
+    left: 40px;
+}
+.menu-options-section div:hover {
+    cursor: pointer;
+}
+#menu-options .option p:hover, #menu-options .option h3:hover {
+    color: var(--color-white-90) !important;
+}
+.social-menu {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: flex-end;
+    padding-left: 10px;
 }
 
 
