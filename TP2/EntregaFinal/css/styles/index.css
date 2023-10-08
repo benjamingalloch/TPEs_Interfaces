@@ -38,7 +38,7 @@
     padding: 0px 50px;
     transition: all 0.5s ease;
 }
-.log-in-optios p, .log-in-optios h3 {
+.form-container p, .form-container h3 {
     color: var(--color-dark);
 }
 
@@ -54,15 +54,16 @@
     border-radius: 30px;
     transition: all 0.5s ease;
 }
-.log-in-optios, .register-options {
+.form-container, .register-options {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 100%;
     height: 100%;
+
 }
-.login-fields-container {
+.title-fields-legal-container {
     display: flex;
     height: 100%;
     width: 100%;
@@ -70,11 +71,17 @@
     flex-direction: column;
     align-items: center;
     align-self: stretch;
-    border-bottom: solid 1px var(--color-dark);
     box-sizing: border-box;
     padding-top: 25px;
+    justify-content: space-between;
+    border-bottom: solid 1px var(--color-dark);
 }
-.login-title {
+.title-fields-container {
+    display: flex;
+    flex-direction: column;
+
+}
+.form-title {
     display: flex;
     padding: 0px 10px 26px 10px;
     flex-direction: column;
@@ -82,9 +89,13 @@
     justify-content: center;
     gap: 10px;
 }
+.form-options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
 
-
-.login-opt-conteiner {
+.form-opt-conteiner {
     display: flex;
     width: 400px;
     height: 45px;
@@ -142,4 +153,24 @@
 /* ------------------------animaciones------------------------- */
 .hidden {
     display: none;
+}
+
+/* ------------------------animaciones------------------------- */
+
+.form-fields-conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.form-field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.form-input {
+    border: solid 1px var(--color-dark);
+    height: 40px;
+    width: 100%;
 }
