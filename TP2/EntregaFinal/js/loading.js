@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         header = document.querySelector('#header'),
         footer = document.querySelector('#footer'),
         i = 0,
-        duration = 4000, // Se setea el tiempo de carga
+        duration = 2500, // Se setea el tiempo de carga
         run = true,
 
         // Se generan 3 numeros random donde se van a dar los cortes simulados
@@ -19,11 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
         start = null;
 
     svg.classList.add('active');
-    
-    // Se saca el display de todos los elementos
-    header.style.display = 'none';
-    main.style.display = 'none';
-    footer.style.display = 'none';
 
     function load(timer) {
         if (!start) start = timer;
@@ -61,17 +56,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 500);
 
             setTimeout(function() {
-                screen.style.display = 'none';
-                header.style.display = 'flex';
-                main.style.display = 'flex';
-                footer.style.display = 'block';
-            }, 2000);
+                screen.classList.add('hidden');
+                header.classList.remove('hidden');
+                main.classList.remove('hidden');
+                footer.classList.remove('hidden');
+            }, 1200);
         }
     }
 
-    
-    screen.style.display = 'none';
-    header.style.display = 'flex';
-    main.style.display = 'flex';
-    footer.style.display = 'block';
+    requestAnimationFrame(load);
 });
