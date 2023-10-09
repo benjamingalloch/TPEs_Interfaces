@@ -224,25 +224,24 @@
 
 /* ------------------------Profile Menu------------------------- */
 #user-options {
-    display: none;
+    display: inline-flex;
     align-items: center;
     flex-direction: column;
     position: absolute;
     top: 70px;
     right: 20px;
-    height: 450px;
-    width: 250px;
+    width: 200px;
     background-color: var(--color-dark);
     border-radius: 8px;
 }
 .user-avatar {
     position: absolute;
-    top: 25px;
+    top: 15px;
 }
 #user-options-top {
     display: flex;
     width: 100%;
-    height: 100px;
+    height: 50px;
     background-color: var(--color-primary-light-3);
     border-bottom: 4px solid var(--color-primary-light-2);
     border-radius: 8px 8px 0px 0px;
@@ -255,7 +254,7 @@
     
     box-sizing: border-box;
     padding: 20px;
-    padding-top: 30px;
+    padding-top: 10px;
 }
 .user-options-container {
     display: flex;
@@ -263,7 +262,6 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
-    border-top: 1px solid var(--color-white-40);
     border-bottom: 1px solid var(--color-white-40);
     box-sizing: border-box;
     gap: 4px;
@@ -277,8 +275,15 @@
     width: 100%;
     padding: 20px 0px;
 }
-.extra-user-options .user-opt {
+.user-opt {
     display: flex;
+    align-items: center;
+    gap: 6px;
+}
+#user-opt-cart.user-opt, #user-opt-fav.user-opt {
+    padding: 6px 0px;
+}
+.extra-user-options .user-opt {
     justify-content: center;
     width: 100%;
 }
@@ -287,8 +292,11 @@
     transition: all 0.3s ease;
 }
 .user-opt button:hover {
-    background-color: var(--color-white-40);
-    border-radius: 1000px;
+    color: var(--color-white);
+}
+#user-opt-cart:hover, #user-opt-fav:hover {
+    cursor: pointer;
+    color: var(--color-dark) !important;
 }
 
 @media only screen and (min-width: 800px) {
@@ -319,6 +327,10 @@
         display: flex;
     }
     #user-options {
-        width: 300px;
+        width: 250px;
     }
+    #user-opt-cart, #user-opt-fav {
+        display: none;
+    }
+
 }
