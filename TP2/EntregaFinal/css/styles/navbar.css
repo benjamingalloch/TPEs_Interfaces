@@ -224,7 +224,7 @@
 
 /* ------------------------Profile Menu------------------------- */
 #user-options {
-    display: flex;
+    display: none;
     align-items: center;
     flex-direction: column;
     position: absolute;

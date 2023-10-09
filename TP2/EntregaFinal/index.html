@@ -22,7 +22,7 @@
                 <!--------------------------------------- OPTIONS / FORMS -------------------------------------->
                 <div class="index-forms">
                     <!---------------------- LOGIN OPTIONS ---------------------->
-                    <div class="form-container hidden">
+                    <div id="login-options" class="form-container">
                         <div class="title-fields-legal-container">
                             <div class="title-fields-container">
                                 <div class="container form-title">
@@ -30,10 +30,10 @@
                                 </div>
                                 <div class="form-options-container">
                                     <div class="form-opt-conteiner">
-                                        <div class="login-opt">
+                                        <button id="btn-toLogin" class="login-opt">
                                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1050_3145)"><path d="M12.4998 12.5C14.8019 12.5 16.6665 10.6354 16.6665 8.33334C16.6665 6.03126 14.8019 4.16667 12.4998 4.16667C10.1978 4.16667 8.33317 6.03126 8.33317 8.33334C8.33317 10.6354 10.1978 12.5 12.4998 12.5ZM12.4998 14.5833C9.71859 14.5833 4.1665 15.9792 4.1665 18.75V20.8333H20.8332V18.75C20.8332 15.9792 15.2811 14.5833 12.4998 14.5833Z" fill="black"/></g><defs><clipPath id="clip0_1050_3145"><rect width="25" height="25" fill="white"/></clipPath> </defs></svg>
                                             <p class="h3-baloo">Usar correo/nombre de usuario</p>
-                                        </div>
+                                        </button>
                                     </div>
                                     <div class="form-opt-conteiner">
                                         <div class="login-opt">
@@ -43,7 +43,9 @@
                                     </div>
                                     <div class="form-opt-conteiner">
                                         <div class="login-opt">
-                                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect width="25" height="25" fill="url(#pattern0)"/><defs><pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="#image0_1050_3160" transform="scale(0.0104167)"/></pattern><image id="image0_1050_3160" width="96" height="96" xlink:href="data:image/png;base64,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"/></defs></svg>
+                                            <svg width="25" height="20" viewBox="0 0 79 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M40.1799 32.956V48.24H61.9599C59.1119 57.5 51.3719 64.128 40.1799 64.128C26.8519 64.128 16.0479 53.324 16.0479 40C16.0479 26.676 26.8519 15.872 40.1799 15.872C46.1719 15.872 51.6439 18.068 55.8639 21.684L67.1199 10.428C60.0119 3.952 50.5559 0 40.1799 0C18.0839 0 0.171875 17.908 0.171875 40C0.171875 62.092 18.0839 80 40.1799 80C73.7639 80 81.1759 48.6 77.8839 33.008L40.1799 32.956Z" fill="#EB3223"/>
+                                            </svg>
                                             <p class="h3-baloo">Continuar con Google</p>
                                         </div>
                                     </div>
@@ -57,12 +59,12 @@
                         <!------------ Registrer button -------------->
                         <div class="alternative-action">
                             <p class="h3-baloo">¿No tienes cuenta?</p>
-                            <p class="h3-baloo button-class alternative-btn">Registrate</p>
+                            <button id="btn-toSignUp" class="h3-baloo button-class alternative-btn">Registrate</button>
                         </div>
                     </div>
 
                     <!---------------------- REGISTER OPTIONS ---------------------->
-                    <div class="form-container hidden">
+                    <div id="register-options" class="form-container hidden">
                         <div class="title-fields-legal-container">
                             <div class="title-fields-container">
                                 <div class="container form-title">
@@ -70,10 +72,10 @@
                                 </div>
                                 <div class="form-options-container">
                                     <div class="form-opt-conteiner">
-                                        <div class="login-opt">
+                                        <button id="btn-toRegister" class="login-opt">
                                             <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_1050_3145)"><path d="M12.4998 12.5C14.8019 12.5 16.6665 10.6354 16.6665 8.33334C16.6665 6.03126 14.8019 4.16667 12.4998 4.16667C10.1978 4.16667 8.33317 6.03126 8.33317 8.33334C8.33317 10.6354 10.1978 12.5 12.4998 12.5ZM12.4998 14.5833C9.71859 14.5833 4.1665 15.9792 4.1665 18.75V20.8333H20.8332V18.75C20.8332 15.9792 15.2811 14.5833 12.4998 14.5833Z" fill="black"/></g><defs><clipPath id="clip0_1050_3145"><rect width="25" height="25" fill="white"/></clipPath> </defs></svg>
                                             <p class="h3-baloo">Usar correo/nombre de usuario</p>
-                                        </div>
+                                        </button>
                                     </div>
                                     <div class="form-opt-conteiner">
                                         <div class="login-opt">
@@ -83,7 +85,9 @@
                                     </div>
                                     <div class="form-opt-conteiner">
                                         <div class="login-opt">
-                                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect width="25" height="25" fill="url(#pattern0)"/><defs><pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="#image0_1050_3160" transform="scale(0.0104167)"/></pattern><image id="image0_1050_3160" width="96" height="96" xlink:href="data:image/png;base64,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"/></defs></svg>
+                                            <svg width="25" height="20" viewBox="0 0 79 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M40.1799 32.956V48.24H61.9599C59.1119 57.5 51.3719 64.128 40.1799 64.128C26.8519 64.128 16.0479 53.324 16.0479 40C16.0479 26.676 26.8519 15.872 40.1799 15.872C46.1719 15.872 51.6439 18.068 55.8639 21.684L67.1199 10.428C60.0119 3.952 50.5559 0 40.1799 0C18.0839 0 0.171875 17.908 0.171875 40C0.171875 62.092 18.0839 80 40.1799 80C73.7639 80 81.1759 48.6 77.8839 33.008L40.1799 32.956Z" fill="#EB3223"/>
+                                            </svg>
                                             <p class="h3-baloo">Continuar con Google</p>
                                         </div>
                                     </div>
@@ -97,12 +101,12 @@
                         <!------------ Login button -------------->
                         <div class="alternative-action">
                                 <p class="h3-baloo">¿Ya tienes cuenta?</p>
-                                <button class="h3-baloo button-class alternative-btn">Inicia sesión</button>
+                                <button id="btn-toSignIn" class="h3-baloo button-class alternative-btn">Inicia sesión</button>
                         </div>
                     </div>
 
                     <!---------------------- REGISTER FORM ---------------------->
-                    <div class="form-container">
+                    <div id="register-form" class="form-container hidden">
                         <div class="title-fields-legal-container">
                             <div class="title-fields-container">
                                 <div class="container form-title">
@@ -155,7 +159,7 @@
                                             <input class="form-input" type="text" placeholder="Al menos 6 caracteres">
                                         </div>
                                     </div>
-                                    <!------------ Capcha -------------->
+                                    <!------------ Captcha -------------->
                                     <div class="form-row">
                                         <div class="form-field">
                                             <div class="capcha">
@@ -181,12 +185,12 @@
                         <!------------ Login button -------------->
                         <div class="alternative-action">
                             <p class="h3-baloo">¿Ya tienes cuenta?</p>
-                            <p class="h3-baloo button-class alternative-btn">Inicia sesión</p>
+                            <button id="btn-toSignIn" class="h3-baloo button-class alternative-btn">Inicia sesión</button>
                         </div>
                     </div>
 
                     <!---------------------- LOGIN FORM ---------------------->
-                    <div class="form-container hidden">
+                    <div id="login-form" class="form-container hidden">
                         <div class="title-fields-legal-container">
                             <div class="title-fields-container">
                                 <div class="container form-title">
@@ -202,7 +206,7 @@
                                     <div class="form-row">
                                         <div class="form-field">
                                             <p class="h3-baloo form-label">Contraseña</p>
-                                            <input class="form-input input" type="text">
+                                            <input class="form-input input" type="password">
                                             <p class="text-baloo form-info-extra form-question pad-2">¿Olvidaste la contraseña?</p>
                                         </div>
                                     </div>
@@ -211,7 +215,11 @@
                                     <div class="form-row">
                                         <div class="form-field">
                                             <div class="submit-btn-container">
-                                                <button class="button-class h3-baloo ">Iniciar sesión</button>
+                                                <button id="btn-toHome" class="button-class">
+                                                    <h3 class="h3-baloo light-80">Iniciar sesión</h3>
+                                                    <span></span>
+                                                    <span></span>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
@@ -222,16 +230,16 @@
                                 <p class="p-baloo">PulpGames y que has leído la Política de privacidad de PulpGames.</p>
                             </div>
                         </div>
-                        <!------------ Login button -------------->
+                        <!------------ Register button -------------->
                         <div class="alternative-action">
-                            <p class="h3-baloo">¿Ya tienes cuenta?</p>
-                            <button class="h3-baloo button-class alternative-btn">Registrate</button>
+                            <p class="h3-baloo">¿No tienes cuenta?</p>
+                            <button id="btn-toSignUp" class="h3-baloo button-class alternative-btn">Registrate</button>
                         </div>
                     </div>
+
                 </div>  
             </div>
         </div>
-        
     </main>
     <script type="text/javascript" src="./js/index.js"></script>
 </body>
