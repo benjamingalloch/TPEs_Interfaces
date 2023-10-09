@@ -9,7 +9,7 @@
 <body>
     <header id="header">
         <div id="menu-options">
-            <!----------- cateogiras especiales ----------->
+            <!----------- categorias especiales ----------->
             <div class="menu-options-section">
                 <div class="option">
                     <img src="./icons/menu_icon_1.svg" alt="">
@@ -118,6 +118,8 @@
                         <span></span>
                         <span></span>
                         <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                 </div>
                 <div>
@@ -175,10 +177,14 @@
                 </div>
             </div>
             <div class="container column fill-width">
-                <div id="game-background" class="container fill-width ">
-                    <div id="gameScreen">
+                <div id="game-background">
+                    <div id="game-screen">
                         <!-------- PONER JUEGO ACA ------->
+                        <img src="./images/4_en_linea_juego.png" alt="">
                     </div>
+                    <button class="button-class" id="btn-full-screen">
+                        <img src="./icons/full_screen.svg" alt="">
+                    </button>
                 </div>
                 <!------------------------- GAME LABEL --------------------------->
                 <div class="game-screen-label">
@@ -191,8 +197,8 @@
                             </div>
                             <img class="margin-top-5 game-label-btn button-class" src="./icons/facebook-dislike.svg" alt="dislike">
                         </div>
-                        <div class="container">
-                            <img class="margin-top-2 game-label-btn button-class" src="./icons/little_heart.svg" alt="favotite heart">
+                        <div class="container" id="like-game-page">
+                            <img class="game-label-btn"  src="./icons/little_heart.svg" alt="favotite heart">
                         </div>
                         <img src="./icons/line-vertical.svg" alt="">
                         <div class="share-btn game-label-btn button-class" >
@@ -541,13 +547,14 @@
                 <!-----------  header ------------>
                 <div class="box-carousel-regular">
                     <div class='header-category'>
-                        <div class="container fill-width space-between pad-4 align-end">
+                        <div class="container fill-width space-between align-end">
                             <div class='title-game-detail'>
                                 <h2 class='h3-baloo'>Juegos similares</h2>
+                                <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1.14329 14.1183C0.656703 13.6317 0.656273 12.8429 1.14233 12.3558L4.57793 8.91267C5.35692 8.13198 5.35693 6.86802 4.57793 6.08733L1.14233 2.64423C0.656273 2.15711 0.656703 1.36832 1.14329 0.88173V0.88173C1.63026 0.394764 2.41979 0.394764 2.90675 0.88173L8.11081 6.08579C8.89186 6.86683 8.89186 8.13317 8.11081 8.91421L2.90676 14.1183C2.41979 14.6052 1.63026 14.6052 1.14329 14.1183V14.1183Z" fill="white" fill-opacity="0.9"/>
+                                </svg>
                             </div>
-                            <button class="button-class">
-                                <p class="p-baloo">ver mas</p>
-                            </button>
+                            
                         </div>
                         <span class='container line'></span>
                     </div> 
