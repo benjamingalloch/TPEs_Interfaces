@@ -1,40 +1,41 @@
 const carousel_r = document.querySelectorAll('.carousel-regular');
 
-//SELECCIONAMOS LOS CARRUSELES
+//SELECCION DE LOS CARRUSELES
 carousel_r.forEach(carousel => {
-    const arrowLeft = carousel.querySelector('.arrow-left');
-    const arrowRight = carousel.querySelector('.arrow-right');
-    const view = carousel.querySelector('.carousel-regular-view');
+    const arrowLeft = carousel.querySelector('.arrow-left'),
+        arrowRight = carousel.querySelector('.arrow-right'),
+        view = carousel.querySelector('.carousel-regular-view');
 
+    // Scrolleo izquierdo
     arrowLeft.addEventListener('click', (event) => {
-        const card_width = document.querySelector('.card-regular').offsetWidth;
-        const computedStyles = window.getComputedStyle(view);
-        const transformValue = computedStyles.transform;
-
-        const carouselWidth = carousel.offsetWidth;
+        const card_width = document.querySelector('.card-regular').offsetWidth,// Ancho de la card
+            computedStyles = window.getComputedStyle(view),
+            transformValue = computedStyles.transform,
+            carouselWidth = carousel.offsetWidth;// Ancho del carrusel
         let posX = 0;
     
         if (transformValue && transformValue !== 'none') {
             const matrixValues = transformValue.match(/matrix\((.+)\)/)[1].split(', ');
-            posX = parseInt(matrixValues[4]) || 0;
+            posX = parseInt(matrixValues[4]) || 0;// Se almacena el valor de la posicion
         }
     
-        arrowRight.classList.remove("hidden");
-
-        const new_pos = posX + (carouselWidth - (card_width + 60));
-        console.log(new_pos);
-        console.log(posX);
+        arrowRight.classList.remove("hidden");// Aparece la flecha derecha
+        
+        // Se calcula la nueva posicion
+        const newPos = posX + (carouselWidth - (card_width * 0.8));
     
+        //
         if (posX < 0) {
-            if (new_pos >= 0) {
+            if (newPos >= 0) {
                 view.style.transform = "translateX(0)";
                 arrowLeft.classList.add("hidden");
             } else {
-                view.style.transform = `translateX(${new_pos}px)`;
+                view.style.transform = `translateX(${newPos}px)`;
             }
         }
     });
 
+    // Scrolleo derecho
     arrowRight.addEventListener('click', (event) => {
         const card_width = document.querySelector('.card-regular').offsetWidth;
         const view_styles = window.getComputedStyle(view);
@@ -50,14 +51,12 @@ carousel_r.forEach(carousel => {
         
         arrowLeft.classList.remove("hidden");
 
-        const new_pos = posX - (carouselWidth - (card_width + 60));
+        const new_pos = posX - (carouselWidth - (card_width * 0.8));
 
         const sizeRestante = (parseInt(view_styles.width) - carouselWidth - Math.abs(posX));
 
         if (sizeRestante > 0){
-            console.log(new_pos);
-            console.log(sizeRestante);
-            if ((Math.abs(new_pos)) > sizeRestante) {
+            if (carouselWidth > sizeRestante) {
                 view.style.transform = `translateX(${posX - sizeRestante - 4}px)`;
                 arrowRight.classList.add("hidden");
             } else {

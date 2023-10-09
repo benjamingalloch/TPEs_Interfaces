@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
         var loginOptions = document.querySelector('.index-forms');
         var registerOptions = document.querySelector('.register-optios');
         
+        console.log('anda');
+
         if (!estado) {
             portada.style.transform = 'translateX(470px)';
             loginOptions.style.transform = 'translateX(-600px)';
