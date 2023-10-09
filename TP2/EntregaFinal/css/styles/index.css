@@ -23,7 +23,7 @@
 .index-container {
     display: flex;
     align-items: center;
-    height: 600px;
+    height: 700px;
     background-color: var(--color-primary);
     border-radius: 50px;
     padding: 20px;
@@ -158,7 +158,7 @@
     display: none;
 }
 
-/* ------------------------animaciones------------------------- */
+/* -------------------------------------------------- F O R M --------------------------------------------------- */
 
 .form-row {
     display: flex;
@@ -187,7 +187,6 @@
     width: 100%;
     border-radius: 24px 12px;
 }
-
 .dropdown-little {
     width: 80%;
 }
@@ -208,7 +207,9 @@
     top: 50%;
     transform: translateY(-50%);
 }
-
 .form-input:hover {
     cursor: text;
+}
+.form-field .capcha img {
+    width: 70%;
 }
