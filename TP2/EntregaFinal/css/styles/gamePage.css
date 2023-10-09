@@ -3,15 +3,41 @@
     height: auto;
     padding: 16px 30px ;
 }
-
 #game-background {
-    height: 600px;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    border-radius: 4px 4px 0 0;
+    width: 100%;
+    height: 80vh;
+    max-height: 700px;
     background-image: url("../../images/Background.jpg");
-    opacity: 0.3;
 }
-#gameScreen {
-    height: 670px;
-    background-color: rgba(255, 255, 255, 0.5);
+#game-background::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px 4px 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+#game-screen {
+    position: relative;
+    z-index: 1;
+}
+#game-screen img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#btn-full-screen {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
 }
 .game-screen-label {
     display: flex;
@@ -21,6 +47,13 @@
     box-sizing: border-box;
     padding: 6px 10px;
     box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.25); 
+}
+#like-game-page{
+    border-radius: 50px;
+    overflow: hidden;
+}
+#like-game-page img{
+    padding: 6px;
 }
 /* --------------------------------------- BREADCRUMBS --------------------------------------- */
 .breadcrumb {
@@ -50,11 +83,10 @@
 #content-game-page {
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     box-sizing: border-box;
     padding: 10px 60px;
-    gap: 60px;
 }
 
 /* ------------------------------------ GAME DETAILS COLUMN ------------------------------------ */
@@ -102,13 +134,23 @@
     padding: 0px 6px;
 }
 #more-games-column {
-    display: inline-flex;
+    position: relative;
+    display: flex;
     align-items: center;
     justify-content: flex-start;
-    width: 280px;
+    max-width: 280px;
     flex-direction: column;
     gap: 16px;
 }
+#more-games-column .title-game-detail {
+    transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    padding: 4px 0;
+}
+#more-games-column .title-game-detail:hover {
+    cursor: pointer;
+    gap: 16px;
+}
+
 .title-game-detail img {
     margin-bottom: 2px;
 }
@@ -335,7 +377,5 @@
 
 
 @media only screen and (min-width: 1281px) {
-    #game-background {
-        height: 700px;
-    }
+    
 }
