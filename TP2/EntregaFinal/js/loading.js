@@ -49,7 +49,4 @@ function draw(timestamp) {
     }
 }
 
-screen.style.display = 'none';
-    header.style.display = 'flex';
-    main.style.display = 'flex';
-    footer.style.display = 'block';
+requestAnimationFrame(draw);
