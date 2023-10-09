@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600&display=swap');
 
 :root {    
+    --color-primary-light-3: rgb(182, 103, 192);
     --color-primary-light-2: rgb(175, 68, 190, 0.8);
     --color-primary-light-1: #A120B3;
     --color-primary: #9003A4;
