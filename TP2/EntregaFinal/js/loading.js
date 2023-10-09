@@ -1,52 +1,77 @@
-var bar = document.querySelector('.progress-bar'),
-    barContainer = document.querySelector('.loading-progress'),
-    counter = document.querySelector('.count'),
-    svg = document.querySelector('.animation-count'),
-    screen = document.querySelector('#loading-screen'),
-    main = document.querySelector('main'),
-    header = document.querySelector('#header'),
-    footer = document.querySelector('#footer'),
-    i = 0,
-    throttle = 0.7,
-    duration = 4000,
-    start;
+document.addEventListener('DOMContentLoaded', function() {
 
-function draw(timestamp) {
+    let bar = document.querySelector('.progress-bar'),
+        barContainer = document.querySelector('.loading-progress'),
+        counter = document.querySelector('.count'),
+        svg = document.querySelector('.animation-count'),
+        screen = document.querySelector('#loading-screen'),
+        main = document.querySelector('main'),
+        header = document.querySelector('#header'),
+        footer = document.querySelector('#footer'),
+        i = 0,
+        duration = 4000, // Se setea el tiempo de carga
+        run = true,
+
+        // Se generan 3 numeros random donde se van a dar los cortes simulados
+        r1 = Math.floor(Math.random() * (99 - 1 + 1) + 1),
+        r2 = Math.floor(Math.random() * (99 - 1 + 1) + 1),
+        r3 = Math.floor(Math.random() * (99 - 1 + 1) + 1),
+        start = null;
+
+    svg.classList.add('active');
+    
+    // Se saca el display de todos los elementos
     header.style.display = 'none';
     main.style.display = 'none';
     footer.style.display = 'none';
-    if (!start) start = timestamp;
-    var progress = timestamp - start;
-    i = (progress / duration) * 100;
-    
-    if (i <= 100) {
-        requestAnimationFrame(draw);
-        var r = Math.random();
-        bar.style.width = i + '%';
-        counter.innerHTML = Math.round(i) + '%';
 
-        if (r < throttle) {
-            i = i + r;
-        }
-    } else {
-        counter.innerHTML = 100 + '%';
-        bar.style.width = 100 + '%';
-        bar.classList.add('done');
+    function load(timer) {
+        if (!start) start = timer;
+        var progress = timer - start;
+        i = (progress / duration) * 100;
         
+        // Si no llego al 100% sigue refrescando
+        if (i <= 100) {
+            // Hacer una pausa simulando una carga no constante
+            if (Math.round(i) == r1 
+            || Math.round(i) == r2 ||
+            Math.round(i) == r3 ) {
+                run = false;
+                var randomWait = Math.floor(Math.random() * (500 - 200 + 1) + 200);
+                setTimeout(function() {
+                    run = true;
+                    requestAnimationFrame(load);
+                }, randomWait);
+            }
+            // Si no hay pausa, sigue corriendo
+            if (run) {
+                requestAnimationFrame(load);
+            }
+            
+            bar.style.width = i + '%';// Ancho de la barra
+            counter.innerHTML = Math.round(i) + '%';// Porcentaje de progreso
+        } else {
+            counter.innerHTML = 100 + '%';
+            bar.style.width = 100 + '%';
+            bar.classList.add('done');
+            
+            setTimeout(function() {
+                svg.style.opacity = 0;
+                barContainer.style.opacity = 0;
+            }, 500);
 
-        setTimeout(function() {
-            svg.style.opacity = 0;
-            barContainer.style.opacity = 0;
-        }, 1000);
-
-
-        setTimeout(function() {
-            screen.style.display = 'none';
-            header.style.display = 'flex';
-            main.style.display = 'flex';
-            footer.style.display = 'block';
-        }, 2500);
+            setTimeout(function() {
+                screen.style.display = 'none';
+                header.style.display = 'flex';
+                main.style.display = 'flex';
+                footer.style.display = 'block';
+            }, 2000);
+        }
     }
-}
 
-requestAnimationFrame(draw);
+    
+    screen.style.display = 'none';
+    header.style.display = 'flex';
+    main.style.display = 'flex';
+    footer.style.display = 'block';
+});

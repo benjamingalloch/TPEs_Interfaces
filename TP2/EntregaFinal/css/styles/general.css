@@ -382,19 +382,20 @@ svg {
     width: 100%;
     max-width: 1200px;
     border-radius: 4px;
-    padding-right: 250px;
+    padding-right: 0;
     box-sizing: border-box;
-    display: none;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
     margin: 20px 0px;
 }
 .extra-announce .image-box {
+    display: none;
     position: absolute;
     right: -60px;
-    bottom: -96px;
-    width: 370px;
+    bottom: -113px;
+    width: 470px;
 }
 .extra-announce .image-box img {
     width: 100%;
@@ -402,8 +403,8 @@ svg {
     object-fit: cover;
 }
 .extra-announce .content {
-    flex-direction: column;
-    gap: 28px;
+    width: 100%;
+    justify-content: space-around;
 }
 .extra-announce .button-class {
     background-color: var(--color-action-button);
@@ -411,6 +412,9 @@ svg {
 }
 .extra-announce .button-class:hover {
     background-color: var(--color-action-button-1);
+}
+.extra-announce .button-class:active {
+    background-color: #222;
 }
 
 @media only screen and (min-width: 800px) {
@@ -424,16 +428,14 @@ svg {
         padding: 20px 30px;
     }
     .extra-announce {
-        display: flex;
+        padding-right: 250px;
     }
     .extra-announce .image-box {
-        position: absolute;
-        right: -60px;
-        bottom: -124px;
-        width: 470px;
+        display: flex;
     }
     .extra-announce .content {
-        flex-direction: row;
+        gap: 36px;
+        justify-content: flex-start;
     }
 }
 

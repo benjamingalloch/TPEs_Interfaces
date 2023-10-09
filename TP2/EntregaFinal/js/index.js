@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     var estado = false;
+
     var buttons = document.querySelectorAll('.alternative-btn');
     
     buttons.forEach(function(button) {
