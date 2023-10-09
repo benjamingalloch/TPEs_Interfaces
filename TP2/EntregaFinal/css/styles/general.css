@@ -437,3 +437,6 @@ svg {
     }
 }
 
+input:focus {
+    outline: none;
+}

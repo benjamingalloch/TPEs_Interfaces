@@ -10,6 +10,7 @@
     <main class="index-main">
         <div class="index-view">
             <div class="index-container">
+                <!------------------------------------------- PORTADA ----------------------------------------->
                 <div class="front-page-container">
                     <div class="front-image-container">
                         <img src="./images/index_image.png" alt="">
@@ -18,6 +19,7 @@
                         <h2 class="h2-baloo">¡Prepárate para un océano de diversión!</h2>
                     </div>
                 </div>
+                <!--------------------------------------- OPTIONS / FORMS -------------------------------------->
                 <div class="index-forms">
                     <!---------------------- LOGIN OPTIONS ---------------------->
                     <div class="form-container hidden">
@@ -95,12 +97,12 @@
                         <!------------ Login button -------------->
                         <div class="alternative-action">
                                 <p class="h3-baloo">¿Ya tienes cuenta?</p>
-                                <p class="h3-baloo button-class alternative-btn">Inicia sesión</p>
+                                <button class="h3-baloo button-class alternative-btn">Inicia sesión</button>
                         </div>
                     </div>
 
                     <!---------------------- REGISTER FORM ---------------------->
-                    <div class="form-container ">
+                    <div class="form-container">
                         <div class="title-fields-legal-container">
                             <div class="title-fields-container">
                                 <div class="container form-title">
@@ -114,7 +116,7 @@
                                         </div>
                                         <div class="form-field">
                                             <p class="h3-baloo form-label">Apellido</p>
-                                            <div class="form-input"></div>
+                                            <input class="form-input" type="text">
                                         </div>
                                     </div>
                                     <div class="form-row">
@@ -141,18 +143,16 @@
                                         <div class="form-field">
                                             <p class="h3-baloo form-label">Dirección de correo electrónico</p>
                                             <div class="form-input-error">
-                                                <div class="form-input"></div>
+                                                <input class="form-input" type="text">
                                                 <img src="./icons/form-error.svg" alt="">
                                             </div>
-                                            <p class="p-baloo form-warning">El correo se encuentra asociado a una cuenta existente</p>
+                                            <p class="text-baloo form-info-extra pad-2">El correo se encuentra asociado a una cuenta existente</p>
                                         </div>
                                     </div>
                                     <div class="form-row">
                                         <div class="form-field">
                                             <p class="h3-baloo form-label">Contraseña</p>
-                                            <div class="form-input">
-                                                <p class="text-baloo">Al menos 6 caracteres</p>
-                                            </div>
+                                            <input class="form-input" type="text" placeholder="Al menos 6 caracteres">
                                         </div>
                                     </div>
                                     <!------------ Capcha -------------->
@@ -166,7 +166,9 @@
                                     <!------------ Submit button -------------->
                                     <div class="form-row">
                                         <div class="form-field">
-                                            <button class="button-class submit-btn">Registrarte</button>
+                                            <div class="submit-btn-container">
+                                                <button class="button-class h3-baloo">Registrarte</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -180,6 +182,50 @@
                         <div class="alternative-action">
                             <p class="h3-baloo">¿Ya tienes cuenta?</p>
                             <p class="h3-baloo button-class alternative-btn">Inicia sesión</p>
+                        </div>
+                    </div>
+
+                    <!---------------------- LOGIN FORM ---------------------->
+                    <div class="form-container hidden">
+                        <div class="title-fields-legal-container">
+                            <div class="title-fields-container">
+                                <div class="container form-title">
+                                    <h3 class="container h2-baloo ">Iniciar sesión en PulpGames</h3>
+                                </div>
+                                <div class="form-fields-container ">
+                                    <div class="form-row">
+                                        <div class="form-field">
+                                            <p class="h3-baloo form-label">Correo electrónico</p>
+                                            <input class="form-input input" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-field">
+                                            <p class="h3-baloo form-label">Contraseña</p>
+                                            <input class="form-input input" type="text">
+                                            <p class="text-baloo form-info-extra form-question pad-2">¿Olvidaste la contraseña?</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!------------ Submit button -------------->
+                                    <div class="form-row">
+                                        <div class="form-field">
+                                            <div class="submit-btn-container">
+                                                <button class="button-class h3-baloo ">Iniciar sesión</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="legal-form">
+                                <p class="p-baloo">Al continuar, confirmas que estás de acuerdo con los Términos de uso de</p>
+                                <p class="p-baloo">PulpGames y que has leído la Política de privacidad de PulpGames.</p>
+                            </div>
+                        </div>
+                        <!------------ Login button -------------->
+                        <div class="alternative-action">
+                            <p class="h3-baloo">¿Ya tienes cuenta?</p>
+                            <button class="h3-baloo button-class alternative-btn">Registrate</button>
                         </div>
                     </div>
                 </div>  

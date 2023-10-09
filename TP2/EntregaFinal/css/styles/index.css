@@ -190,11 +190,11 @@
 .dropdown-little {
     width: 80%;
 }
-.form-warning {
+.form-info-extra {
     font-style: italic !important;
     padding-left: 5px;
 }
-.form-input-error div{
+.form-input-error input{
     border: solid 1.5px var(--color-error) !important;
 }
 .form-input-error {
@@ -213,3 +213,33 @@
 .form-field .capcha img {
     width: 70%;
 }
+.form-field .capcha img:hover {
+    cursor: pointer;
+}
+.submit-btn-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 20%;
+    margin-top: 15px;
+    
+}
+.submit-btn-container .button-class {
+    background-color: var(--color-action-button);
+    height: 40px;
+    width: 100%;
+    transition: all 0.3s ease;
+    color: var(--color-white);
+}
+.submit-btn-container .button-class:hover {
+    color: var(--color-white);
+    background-color: var(--color-action-button-1);
+    box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+}
+
+.form-question:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
