@@ -11,6 +11,7 @@
 .navbar {
     width: 100%;
     padding: 0px 20px;
+    box-sizing: border-box;
     background-color: var(--color-primary);
     display: grid;
     grid-template: auto / repeat(3, 1fr);
@@ -56,6 +57,9 @@
 #navbar-central {
     opacity: 0;
     height: 50px;
+} 
+#navbar-derecha img, #navbar-derecha h3 {
+    cursor: pointer;
 }
 #favoritos{
     display: none;
@@ -148,6 +152,7 @@
     box-sizing: border-box;
     z-index: 3;
     transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+    overflow: scroll;
 }
 #menu-options.open {
     left: 0px;

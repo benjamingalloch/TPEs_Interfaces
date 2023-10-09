@@ -1,0 +1,102 @@
+.loading-progress {
+    margin: 100px;
+    position: relative;
+    width: 500px;
+    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+.progress-bar-container {
+    width: 100%;
+    height: 15px;
+    background-color: var(--color-white-10);
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    box-sizing: border-box;
+}
+.progress-bar {
+    height: 15px;
+    background-image: linear-gradient(to right, rgb(59, 3, 67), rgb(144, 3, 164) 70%, rgb(144, 130, 164));
+    background-color: var(--color-white);
+    border-radius: 100px;
+    transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.done {
+    background-image: none;
+    background-color: var(--color-primary);
+    transition: background-color 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+}
+.count {  
+    width: 100%;
+    text-align: center;
+    position: absolute;
+}
+.animation-count {
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+  
+  
+#loading-screen {
+    position: relative;
+    background-color: var(--color-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+#loading-screen svg {
+    position: relative;
+}
+:root {
+    --hue: 223;
+}
+.pl {
+    display: block;
+    width: 200px;
+}
+.pl__ring, .pl__ball {
+    animation: ring 2s ease-out infinite;
+}
+.pl__ball {
+    animation-name: ball;
+}
+  
+/* Animation */
+@keyframes ring {
+    from {
+        stroke-dasharray: 0 257 0 0 1 0 0 258;
+    }
+    25% {
+        stroke-dasharray: 0 0 0 0 257 0 258 0;
+    }
+    50%, to {
+        stroke-dasharray: 0 0 0 0 0 515 0 0;
+    }
+}
+@keyframes ball {
+    from, 50% {
+        animation-timing-function: ease-in;
+        stroke-dashoffset: 1;
+    }
+    64% {
+        animation-timing-function: ease-in;
+        stroke-dashoffset: -109;
+    }
+    78% {
+        animation-timing-function: ease-in;
+        stroke-dashoffset: -145;
+    }
+    92% {
+        animation-timing-function: ease-in;
+        stroke-dashoffset: -157;
+    }
+    57%, 71%, 85%, 99%, to {
+        animation-timing-function: ease-out;
+        stroke-dashoffset: -163;
+    }
+}

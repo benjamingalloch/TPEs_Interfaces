@@ -8,10 +8,112 @@
 </head>
 <body>
     <header id="header">
+        <div id="menu-options">
+            <!----------- cateogiras especiales ----------->
+            <div class="menu-options-section">
+                <div class="option">
+                    <img src="./icons/menu_icon_1.svg" alt="">
+                    <p class="h3-baloo">Reciente</p>
+                </div>
+                <div class="option">
+                    <img src="./icons/menu_icon_2.svg" alt="">
+                    <p class="h3-baloo">Nuevo</p>
+                </div>
+                <div class="option">
+                    <img src="./icons/menu_icon_3.svg" alt="">
+                    <p class="h3-baloo">Tendencia</p>
+                </div>
+                <div class="option">
+                    <img src="./icons/menu_icon_4.svg" alt="">
+                    <p class="h3-baloo">Gratis</p>
+                </div>
+            </div>
+            <!----------- Categorias ----------->
+            <div class="menu-options-section">
+                <div class="option">
+                    <img src="./icons/menu_icon_5.svg" alt="">
+                    <p class="h3-baloo">Básquet</p>
+                </div>
+                <div class="option">
+                    <img src="./icons/menu_icon_6.svg" alt="">
+                    <p class="h3-baloo">Aventura</p>
+                </div>
+                <div class="option">
+                    <img src="./icons/menu_icon_7.svg" alt="">
+                    <p class="h3-baloo">Disparos</p>
+                </div>
+                <div class="option">
+                    <img src="./icons/menu_icon_8.svg" alt="">
+                    <p class="h3-baloo">Acción</p>
+                </div>
+                <div class="option">
+                    <img src="./icons/menu_icon_9.svg" alt="">
+                    <p class="h3-baloo">Carreras</p>
+                </div>
+                <div class="option">
+                    <img src="./icons/menu_icon_10.svg" alt="">
+                    <p class="h3-baloo">Cocina</p>
+                </div>
+                <div class="option">
+                    <img src="./icons/menu_icon_5.svg" alt="">
+                    <p class="h3-baloo">Basketball</p>
+                </div>
+                <div class="option">
+                    <img src="./icons/menu_icon_8.svg" alt="">
+                    <p class="h3-baloo">Acción</p>
+                </div>
+                <div class="option">
+                    <img src="./icons/menu_icon_6.svg" alt="">
+                    <p class="h3-baloo">Aventura</p>
+                </div>
+                <div class="option">
+                    <img src="./icons/menu_icon_7.svg" alt="">
+                    <p class="h3-baloo">Carrera</p>
+                </div>
+                <div class="option">
+                    <img src="./icons/menu_icon_8.svg" alt="">
+                    <p class="h3-baloo">Cocina</p>
+                </div>
+                <div class="option">
+                    <img src="./icons/menu_icon_9.svg" alt="">
+                    <p class="h3-baloo">Disparos</p>
+                </div>
+            </div>
+            <!----------- legales ----------->
+            <div class="menu-options-section">
+                <div class="option">
+                    <h3 class="p-10-baloo">Términos y Condiciones</h3>
+                </div>
+                <div class="option">
+                    <h3 class="p-10-baloo">Privacy Policy</h3>
+                </div>
+                <div class="option">
+                    <h3 class="p-10-baloo">Términos y Condiciones</h3>
+                </div>
+                <div class="option">
+                    <h3 class="p-10-baloo">Copyright © 2023 PulpGames, Inc</h3>
+                </div>
+            </div>
+            <!----------- Redes ----------->
+            <div class="menu-options-section social-menu">
+                <div class="option ">
+                    <img src="./icons/menu_icon_social_1.svg" alt="">
+                </div>
+                <div class="option">
+                    <img src="./icons/menu_icon_social_2.svg" alt="">
+                </div>
+                <div class="option">
+                    <img src="./icons/menu_icon_social_3.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="user-options">
+
+        </div>
         <nav class="navbar">
             <div class="container row flex-start">
                 <!-- IZQUIERDA -->
-                <div>
+                <div class="container">
                     <div class="menu-burger burger-icon">
                         <span></span>
                         <span></span>
@@ -19,36 +121,41 @@
                     </div>
                 </div>
                 <div>
-                    <a href="./home.html" class="container pad-8">
+                    <a href="./home.html" class="container" id="logo">
                         <img src="./icons/Logo.svg" class="" alt="logo" />
                         <img src="./images/PulpGames.png" id="text_logo" class="pad-4" alt="PulpGames">
                     </a>
                 </div>
             </div>
         
-            <div class="container row flex-center">
+            <div class="container row flex-center" id="navbar-central">
                 <!-- CENTRO -->
                 <div class="container search-bar">
                     <input type="text" placeholder="Buscar juego" />
-                    <button class="unstyle container">
-                        <img src="./icons/search.svg" alt="search"/>
+                    <button class="unstyle container ">
+                        <img src="./icons/search.svg" class="container" alt="search"/>
                     </button>
                 </div>
             </div>
         
-            <div class="container row flex-end">
+            <div class="container row flex-end gap-12" id="navbar-derecha">
                 <!-- DERECHA -->
+                <div class="container">
+                    <button class="unstyle container">
+                        <img src="./icons/search.svg" alt="search"/>
+                    </button>
+                </div>
                 <div class="container row">
-                    <div class="container row pad-4">
-                        <img src="./icons/heart.svg" class="pad-4" alt="Mis favoritos" />
+                    <div class="container row" id="favoritos">
+                        <img src="./icons/heart.svg" alt="Mis favoritos" />
                         <h3 class="h3-baloo not-bold dark">Mis favoritos</h3>
                     </div>
                 </div>
-                <div>
-                    <img src="./icons/cart.svg" class="pad-4" alt="Mi colección" />
+                <div class="container align-center" id="cart">
+                    <img src="./icons/cart.svg" alt="Mi colección" />
                 </div>
-                <div>
-                    <p class="p-baloo">-user</p>
+                <div class="container">
+                    <img src="./icons/user.svg" alt="">
                 </div>
             </div>
         </nav>
