@@ -15,8 +15,8 @@
 }
 .progress-bar {
     height: 15px;
-    background-image: linear-gradient(to right, rgb(59, 3, 67), rgb(144, 3, 164) 70%, rgb(144, 130, 164));
-    background-color: var(--color-white);
+    background-image: linear-gradient(to right, rgb(59, 3, 67), rgb(144, 3, 164) 70%, rgb(157, 131, 160));
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 100px;
     transition: all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }

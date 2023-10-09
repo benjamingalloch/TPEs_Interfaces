@@ -45,7 +45,7 @@ function draw(timestamp) {
             header.style.display = 'flex';
             main.style.display = 'flex';
             footer.style.display = 'block';
-        }, 2000);
+        }, 2500);
     }
 }
 
