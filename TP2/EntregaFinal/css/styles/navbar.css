@@ -227,13 +227,18 @@
     display: inline-flex;
     align-items: center;
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     top: 70px;
-    right: 20px;
+    right: -300px;
     width: 200px;
     background-color: var(--color-dark);
     border-radius: 8px;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+#user-options.opened {
+    right: 20px;
+}
+
 .user-avatar {
     position: absolute;
     top: 15px;
@@ -297,6 +302,9 @@
 #user-opt-cart:hover, #user-opt-fav:hover {
     cursor: pointer;
     color: var(--color-dark) !important;
+}
+.user-menu-btn:hover {
+    cursor: pointer;
 }
 
 @media only screen and (min-width: 800px) {
