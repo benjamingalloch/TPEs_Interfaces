@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var userMenu = document.getElementById('user-options');
 
     if (!userMenu.contains(event.target) && !button.contains(event.target) && userMenu.classList.contains('opened')) {
-        console.log("anda");
         userMenu.classList.remove('opened');
     }   
     });
