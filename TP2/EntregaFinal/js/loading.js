@@ -64,5 +64,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    requestAnimationFrame(load);
+    
+    screen.classList.add('hidden');
+    header.classList.remove('hidden');
+    main.classList.remove('hidden');
+    footer.classList.remove('hidden');
 });

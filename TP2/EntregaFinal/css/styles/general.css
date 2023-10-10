@@ -48,6 +48,9 @@ button {
     cursor: pointer;
     outline: none;
 }
+input:focus {
+    outline: none;
+}
 a {
     text-decoration: none;
 }
@@ -412,11 +415,34 @@ svg {
     padding: 6px 16px;
 }
 .extra-announce .button-class:hover {
+    padding: 10px 20px;
     background-color: var(--color-action-button-1);
+    gap: 10px;
+    transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.extra-announce .button-class:hover svg{
+    height: 35px;
+    width: 35px;
+    animation: shake 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .extra-announce .button-class:active {
-    background-color: #222;
+    background-color: var(--color-dark);
 }
+
+@keyframes shake {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-25deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+  
+  
 
 @media only screen and (min-width: 800px) {
     main {
@@ -438,8 +464,4 @@ svg {
         gap: 36px;
         justify-content: flex-start;
     }
-}
-
-input:focus {
-    outline: none;
 }
