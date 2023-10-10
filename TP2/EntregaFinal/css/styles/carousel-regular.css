@@ -45,11 +45,10 @@
 .carousel-regular-view {
     position: absolute;
     display: flex;
-    transition: transform 0.3s ease;
     justify-content: flex-start;
     gap: 20px;
     z-index: 0;
-    transition: transform .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: transform .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .carousel-regular .arrow-left, .carousel-regular .arrow-right {
     background: linear-gradient(90deg, #2c2c2c 0%, rgba(34, 34, 34, 0.70) 100%);

@@ -63,10 +63,5 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 1200);
         }
     }
-
-    screen.classList.add('hidden');
-    header.classList.remove('hidden');
-    main.classList.remove('hidden');
-    footer.classList.remove('hidden');
-
+    requestAnimationFrame(load);
 });
