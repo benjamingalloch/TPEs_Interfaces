@@ -6,12 +6,14 @@ document.addEventListener('DOMContentLoaded', function() {
         userMenu.classList.toggle('opened');
     });
 
-    
+    document.addEventListener('click', function(event) {
+    var userMenu = document.getElementById('user-options');
+
+    if (!userMenu.contains(event.target) && !button.contains(event.target) && userMenu.classList.contains('opened')) {
+        console.log("anda");
+        userMenu.classList.remove('opened');
+    }   
+    });
    
 });
 
-document.addEventListener('click', function(event) {
-        if (!userMenu.contains(event.target) && userMenu.classList.contains('opened')) {
-            userMenu.classList.remove('opened');
-        }
-});
