@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+.menu-4-in-line-container {
+    display: flex;
+    border-radius: 4px;
+    align-items: center;
+    height: 500px;
+    width: 800px;
+    z-index: 2;
+    background-color: var(--color-white-70);
+    font-family: 'VT323' !important; 
+
+}
+
+.menu-4-in-line-container .form-container {
+    height: 100%;
+}
+
+.form-columns-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.menu-4-in-line-container .form-fields-container {
+    max-width: 300px;
+}
+
+.menu-4-in-line-container .title-fields-legal-container {
+    padding: 50px 50px;
+    gap: 30px;
+}
+
+.menu-4-in-line-container h3 {
+    font-size: 40px;
+}
+
+.menu-4-in-line-container p {
+    font-size: 20px;
+}
+
+.opts-4-in-line {
+    display: flex;
+    gap: 10px;
+}
+
+#input-4-in-line {
+    font-family: 'VT323';
+}
+
+.menu-4-in-line-container .login-opt, .menu-4-in-line-container .form-input, .menu-4-in-line-container .submit-btn-container {
+    border-radius: 2px !important;
+}
+    
+.opts-4-in-line .login-opt:hover {
+    background-color: var(--color-dark-70);
+}   
+
+.btn-4-in-line-size-marked {
+    background-color: var(--color-dark-50);
+}
+
+.font-4-in-line {
+
+}
+
+.top-line {
+    border-top: solid 1px var(--color-dark);
+    padding-top: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.form-row-game {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    gap: 10px;
+}
+.form-field-game {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 4px;
+}
+.form-label-game {
+    padding-left: 10px;
+    color: var(--color-dark);
+}
+.form-input-game {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: space-between;
+    padding: 0px 20px;
+    border: solid 1px var(--color-dark);
+    height: 35px;
+    width: 100%;
+    border-radius: 24px 12px;
+}

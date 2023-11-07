@@ -1,0 +1,93 @@
+.box-carousel-regular {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    flex-direction: column;
+    gap: 2px;
+}
+.box-carousel-regular .header-category {
+    max-width: 100%;
+}
+.box-carousel-regular .header-category .line {
+    margin: 8px 0px;
+}
+
+.header-category .button-class {
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.header-category .button-class:hover {
+    padding: 6px 10px;
+    background-color: var(--color-white-10);
+}
+
+.carousel-regular {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 280px;
+    padding: 10px 0px;
+    
+    overflow-x: auto; 
+    overflow-y: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+.carousel-regular::-webkit-scrollbar {
+    width: 0px;
+}
+.carousel-regular::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+.carousel-regular::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+.carousel-regular-view {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    z-index: 0;
+    transition: transform .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.carousel-regular .arrow-left, .carousel-regular .arrow-right {
+    background: linear-gradient(90deg, #2c2c2c 0%, rgba(34, 34, 34, 0.70) 100%);
+    height: 280px;
+    width: 40px;
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transition: box-shadow 0.3s ease;
+}
+.carousel-regular .arrow-right {
+    background: linear-gradient(90deg, rgba(34, 34, 34, 0.70), #2c2c2c 100%);
+    right: 0px;
+}
+.carousel-regular .arrow-left:hover {
+    box-shadow: 2px -1px 6px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+.carousel-regular .arrow-right:hover {
+    box-shadow: -2px -1px 6px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+.hidden {
+    display: none !important;
+}
+
+@media only screen and (min-width: 800px){
+    .carousel-regular .arrow-left, 
+    .carousel-regular .arrow-right {
+        height: 320px;
+        display: flex;
+    }
+    .carousel-regular {
+        height: 320px;
+    }
+    .carousel-regular {
+        overflow: hidden;
+    }
+}
+

@@ -1,0 +1,388 @@
+#infoSection {
+    width: 100%;
+    height: auto;
+    padding: 16px 30px ;
+}
+#game-background {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px 4px 0 0;
+    width: 100%;
+    height: 80vh;
+    max-height: 700px;
+    background-image: url("../../images/Background.jpg");
+}
+#game-background::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px 4px 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+#game-screen {
+    position: relative;
+    z-index: 1;
+}
+#game-screen img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#btn-full-screen {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    cursor: pointer;
+    display: flex;
+    padding: 6px;
+    z-index: 1;
+}
+#btn-full-screen:hover {
+    background-color: var(--color-white-10);
+}
+.game-screen-label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 6px 15px;
+    box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.25); 
+}
+#like-game-page{
+    border-radius: 50px;
+    overflow: hidden;
+}
+#like-game-page img{
+    padding: 6px;
+}
+/* --------------------------------------- BREADCRUMBS --------------------------------------- */
+.breadcrumb {
+    color: var(--color-white-80);
+}
+.breadcrumb:hover {
+    cursor: pointer;
+    color: var(--color-white);
+}
+
+/* ------------------------------------ GAME SCREEN LABEL ------------------------------------ */
+.game-label-btn:hover {
+    background-color: var(--color-white-05);
+    cursor: pointer;
+}
+.game-label-btn.button-class {
+    padding: 5px;
+}
+.share-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 3px 10px !important; 
+}
+
+/* ------------------------------------ CONTENT PAGE - UNDER GAME ------------------------------------ */
+#content-game-page {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1300px;
+    box-sizing: border-box;
+    padding: 10px 60px;
+}
+
+/* ------------------------------------ GAME DETAILS COLUMN ------------------------------------ */
+#game-details-column {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 50px;
+    max-width: 800px;
+}
+/* ------------------------------------ GAME DETAIL ------------------------------------ */
+.game-detail {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px 32px;
+    gap: 12px;
+}
+.header-game-detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.title-game-detail {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.heder-g-detail-action {
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    gap: 4px;
+}
+.game-detail-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 6px;
+}
+#more-games-column {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 280px;
+    flex-direction: column;
+    gap: 16px;
+}
+#more-games-column .title-game-detail {
+    transition: all .3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    padding: 4px 0;
+}
+#more-games-column .title-game-detail:hover {
+    cursor: pointer;
+    gap: 16px;
+}
+
+.title-game-detail img {
+    margin-bottom: 2px;
+}
+
+/* ------------------------------------ GAMEPLAYS ------------------------------------ */
+.gameplay-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+}
+.gameplay-card:hover {
+    cursor: pointer;
+}
+.video-label {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2px;
+    width: 100%;
+}
+.videoImage {
+    width: 150px;
+}
+
+/* ------------------------------------ CAPTURAS ------------------------------------ */
+.grilla-capturas {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.grilla-capturas div {
+    width: 150px;
+}
+.grilla-capturas img {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    cursor: pointer;
+}
+.game-screnshot:hover {
+    cursor: pointer;
+}
+/* ----------------- Ampliar Captura ---------------- */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 100;
+}
+.ampliacion {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    max-width: 80%;
+    max-height: 80%;
+    display: none;
+    z-index: 101;
+}
+.ampliacion img {
+    width: 100%;
+    height: 100%;
+}
+/* ----------------- Cerrar Captura ---------------- */
+.cerrar {
+    position: absolute;
+    right: 40px;
+    top: 90px;
+    cursor: pointer;
+}
+
+.ampliacion .cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ffffff;
+  } 
+/* ----------------- FLECHAS ---------------- */
+.captura-arrow.left, 
+.captura-arrow.right {
+    position: absolute;
+    top: calc(50vh - 17px);
+    cursor: pointer;
+}
+.captura-arrow.right {
+    right: 80px;
+}
+.captura-arrow.left {
+    left: 80px;
+}
+
+/* -----------------------------NUEVO COMENTARIO----------------------------- */
+
+.new-comment-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2px;
+    width: 100%;
+}
+.new-comment-action {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    gap: 10px;
+}
+.heder-g-detail-action:hover {
+    cursor: pointer;
+}
+.new-comment-action .button-class {
+    background-color: var(--color-white-05);
+    color: var(--color-white-40);
+    padding: 6px;
+    transition: all 0.3s ease;
+    cursor: auto;
+}
+.new-comment-action .button-class.active:hover {
+    background-color: var(--color-action-button-1);
+    cursor: pointer;
+}
+.new-comment-box input {
+    all: unset;
+    padding: 0px 6px;
+    width: 100%;
+    font-family: 'Baloo 2', cursive;
+    word-wrap: break-word;
+    font-size: 16px;
+    color: var(--color-white-90);
+}
+.new-comment-action .button-class.active {
+    background-color: var(--color-action-button);
+    color: var(--color-white-90);
+}
+
+/* ------------------------------------COMENTARIOS ANTIGUOS------------------------------------ */
+.regular-user-comment {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+.regular-comment-body {
+    padding-left: 38px;
+}
+.user-avatar-container {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 1000px;
+    overflow: hidden; 
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+.user-avatar-container:hover {
+    cursor: pointer;
+}
+.avatar {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    width: 40px;
+    height: auto; 
+    border-radius: 100%; 
+    overflow: hidden;
+}
+.avatar img {
+    width: 100%; 
+    height: auto;
+    object-fit: cover;
+}
+.nameComment{
+    cursor: pointer;
+}
+.comment-like {
+    width: 15px;
+}
+.comment-action .button-class {
+    color: var(--color-white-90);
+    padding: 6px;
+    transition: all 0.3s ease;
+    cursor: auto;
+}
+.comment-action .button-class:hover {
+    background-color: var(--color-white-05);
+    cursor: pointer;
+}
+.comment-action .comment-like{
+    padding: 4px;
+}
+.comment-action .comment-like:hover {
+    background-color: var(--color-white-05);
+}
+
+/* ------------------------------------ MAS JUEGOS ------------------------------------ */
+.more-games {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+}
+
+.more-games-column .box-carousel-regular, .header-category{
+    max-width: 210px;
+}
+.header-category .title-game-detail {
+    padding-top: 2px;
+}
+
+
+
+@media only screen and (min-width: 1281px) {
+    
+}

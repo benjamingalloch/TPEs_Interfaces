@@ -1,0 +1,26 @@
+@import url('./general.css');
+
+#footer {
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    z-index: 1;
+}
+#footer section:nth-child(1) {
+    background-color: var(--color-primary);
+}
+#footer section:nth-child(1) div{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#footer section:nth-child(2) {
+    background-color: var(--color-primary-shadow-1);
+}
+#footer li {
+    color: var(--color-white-80);
+    padding-bottom: 2px;
+}
+#footer li:hover {
+    color: var(--color-white-90);
+    cursor: pointer;
+}
