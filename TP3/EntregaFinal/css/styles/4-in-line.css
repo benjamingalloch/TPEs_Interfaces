@@ -69,57 +69,19 @@
     border-radius: 2px !important;
 }
     
-.opts-4-in-line .login-opt:hover {
+.opts-4-in-line :not(.blocked) .login-opt:hover{
     background-color: var(--color-white-70);
 }   
 
 .btn-4-in-line-size-marked {
-    background-color: var(--color-dark-50);
+    background-color: var(--color-white-70);
 }
-
-.font-4-in-line {
-
+.opts-4-in-line .blocked .login-opt{
+    cursor: auto !important;
+    background-color: var(--color-dark-70) !important;
 }
 
 .top-line {
     border-top: solid 1px var(--color-dark);
     padding-top: 25px;
-}
-
-
-
-
-
-
-
-
-
-
-
-.form-row-game {
-    display: flex;
-    align-items: flex-start;
-    width: 100%;
-    gap: 10px;
-}
-.form-field-game {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 4px;
-}
-.form-label-game {
-    padding-left: 10px;
-    color: var(--color-dark);
-}
-.form-input-game {
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    justify-content: space-between;
-    padding: 0px 20px;
-    border: solid 1px var(--color-dark);
-    height: 35px;
-    width: 100%;
-    border-radius: 24px 12px;
 }

@@ -233,34 +233,34 @@
                                                     <div class="form-row">
                                                         <div class="form-field">
                                                             <p class="form-label">Nombre jugador 1</p>
-                                                            <input id="input-4-in-line" class="form-input input" type="text" maxlength="13">
+                                                            <input id="input-4-in-line-name-p1" class="form-input input" type="text" maxlength="13" required>
                                                         </div>
                                                     </div>
                                                     <div class="form-row">
                                                         <div class="form-field">
                                                             <p class="form-label">Ficha</p>
                                                             <div class="opts-4-in-line">
-                                                                <div id="btn-4-in-line-size" class="form-opt-conteiner">
-                                                                    <button class="login-opt btn-4-in-line-size" value="4">
+                                                                <div id="chip_opt_player_1" class="form-opt-conteiner" value="Ficha_ASTRONAUTA.png">
+                                                                    <button type = "button" class="login-opt">
                                                                         <img src="images/Ficha_ASTRONAUTA.png" alt="Ficha_ASTRONAUTA">
                                                                     </button>
                                                                 </div>
-                                                                <div class="form-opt-conteiner">
-                                                                    <button class="login-opt btn-4-in-line-size" value="5">
+                                                                <div id="chip_opt_player_1" class="form-opt-conteiner" value="Ficha_AUTO.png">
+                                                                    <button type = "button" class="login-opt">
                                                                         <img src="images/Ficha_AUTO.png" alt="Ficha_AUTO">
                                                                     </button>
                                                                 </div>
-                                                                <div class="form-opt-conteiner">
-                                                                    <button class="login-opt btn-4-in-line-size" value="6">
+                                                                <div id="chip_opt_player_1" class="form-opt-conteiner" value="Ficha_COHETE.png">
+                                                                    <button type = "button" class="login-opt">
                                                                         <img src="images/Ficha_COHETE.png" alt="Ficha_COHETE">
                                                                     </button>
                                                                 </div>
-                                                                <div class="form-opt-conteiner">
-                                                                    <button class="login-opt btn-4-in-line-size" value="7">
+                                                                <div id="chip_opt_player_1" class="form-opt-conteiner" value="Ficha_COMPUTADORA.png">
+                                                                    <button type = "button" class="login-opt">
                                                                         <img src="images/Ficha_COMPUTADORA.png" alt="Ficha_COMPUTADORA">
                                                                     </button>
                                                                 </div>
-                                                                <input type="hidden" id="game-board-size">
+                                                                <input type="hidden" id="chip_selected_player_1" value="">
                                                             </div> 
                                                         </div>
                                                     </div>
@@ -273,41 +273,39 @@
                                                     <div class="form-row">
                                                         <div class="form-field">
                                                             <p class="form-label">Nombre jugador 2</p>
-                                                            <input class="form-input input" type="text" maxlength="13"> 
+                                                            <input id="input-4-in-line-name-p2" class="form-input input" type="text" maxlength="13" required> 
                                                         </div>
                                                     </div>
                                                     <div class="form-row">
                                                         <div class="form-field">
                                                             <p class="form-label">Ficha</p>
                                                             <div class="opts-4-in-line">
-                                                                <div id="btn-4-in-line-size" class="form-opt-conteiner">
-                                                                    <button class="login-opt btn-4-in-line-size" value="4">
+                                                                <div id="chip_opt_player_2" class="form-opt-conteiner" value="Ficha_ASTRONAUTA.png">
+                                                                    <button type = "button" class="login-opt">
                                                                         <img src="images/Ficha_ASTRONAUTA.png" alt="Ficha_ASTRONAUTA">
                                                                     </button>
                                                                 </div>
-                                                                <div class="form-opt-conteiner">
-                                                                    <button class="login-opt btn-4-in-line-size" value="5">
+                                                                <div id="chip_opt_player_2" class="form-opt-conteiner" value="Ficha_AUTO.png">
+                                                                    <button type = "button" class="login-opt">
                                                                         <img src="images/Ficha_AUTO.png" alt="Ficha_AUTO">
                                                                     </button>
                                                                 </div>
-                                                                <div class="form-opt-conteiner">
-                                                                    <button class="login-opt btn-4-in-line-size" value="6">
+                                                                <div id="chip_opt_player_2" class="form-opt-conteiner"  value="Ficha_COHETE.png">
+                                                                    <button type = "button" class="login-opt">
                                                                         <img src="images/Ficha_COHETE.png" alt="Ficha_COHETE">
                                                                     </button>
                                                                 </div>
-                                                                <div class="form-opt-conteiner">
-                                                                    <button class="login-opt btn-4-in-line-size" value="7">
+                                                                <div id="chip_opt_player_2" class="form-opt-conteiner" value="Ficha_COMPUTADORA.png">
+                                                                    <button type = "button" class="login-opt">
                                                                         <img src="images/Ficha_COMPUTADORA.png" alt="Ficha_COMPUTADORA">
                                                                     </button>
                                                                 </div>
-                                                                <input type="hidden" id="game-board-size">
+                                                                <input type="hidden" id="chip_selected_player_2" value="">
                                                             </div> 
                                                         </div>
                                                     </div>
                                                     
-                                                    
-                                                    
-                                                    <!------------ Submit button -------------->
+                        
                                                     
                                                 </div>
                                             </div>
@@ -316,19 +314,19 @@
                                                 <div class="form-field">
                                                     <p class="form-label">Tamaño del tablero</p>
                                                         <div class="opts-4-in-line">
-                                                            <div id="btn-4-in-line-size" class="form-opt-conteiner">
-                                                                <button class="login-opt btn-4-in-line-size" value="4">7 X 6</button>
+                                                            <div id="btn-4-in-line-size" class="form-opt-conteiner" value="4">
+                                                                <button type = "button" class="login-opt btn-4-in-line-size" >7 X 6</button>
                                                             </div>
-                                                            <div class="form-opt-conteiner">
-                                                                <button class="login-opt btn-4-in-line-size" value="5">8 X 7</button>
+                                                            <div id="btn-4-in-line-size" class="form-opt-conteiner" value="5">
+                                                                <button type = "button" class="login-opt btn-4-in-line-size" >8 X 7</button>
                                                             </div>
-                                                            <div class="form-opt-conteiner">
-                                                                <button class="login-opt btn-4-in-line-size" value="6">9 X 8</button>
+                                                            <div id="btn-4-in-line-size" class="form-opt-conteiner" value="6">
+                                                                <button type = "button" class="login-opt btn-4-in-line-size" >9 X 8</button>
                                                             </div>
-                                                            <div class="form-opt-conteiner">
-                                                                <button class="login-opt btn-4-in-line-size" value="7">10 X 9</button>
+                                                            <div id="btn-4-in-line-size" class="form-opt-conteiner" value="7">
+                                                                <button type = "button" class="login-opt btn-4-in-line-size" >10 X 9</button>
                                                             </div>
-                                                            <input type="hidden" id="game-board-size">
+                                                            <input type="hidden" id="game-board-size" value="">
                                                         </div> 
                                                 </div>
                                             </div>
@@ -336,10 +334,8 @@
                                             <div class="form-row">
                                                 <div class="form-field">
                                                     <div class="submit-btn-container">
-                                                        <button id="btn-toPlay" class="">
+                                                        <button id="btn-to-play" class="">
                                                             <h3 class="light-80">JUGAR</h3>
-                                                            <span></span>
-                                                            <span></span>
                                                         </button>
                                                     </div>
                                                 </div>
@@ -361,9 +357,8 @@
                         </div>
                         
                         <!-------- PONER JUEGO ACA ------->
-                        <canvas width="1200" height="700" id="4-in-line-canvas">
-                        </canvas>
-
+                        
+                   
                     <button class="button-class" id="btn-full-screen">
                         <img src="./icons/full_screen.svg" alt="">
                     </button>
