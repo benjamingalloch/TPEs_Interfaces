@@ -69,16 +69,16 @@
     border-radius: 2px !important;
 }
     
-.opts-4-in-line .login-opt:hover {
+.opts-4-in-line :not(.blocked) .login-opt:hover{
     background-color: var(--color-white-70);
 }   
 
 .btn-4-in-line-size-marked {
-    background-color: var(--color-dark-50);
+    background-color: var(--color-white-70);
 }
-
-.font-4-in-line {
-
+.opts-4-in-line .blocked .login-opt{
+    cursor: auto !important;
+    background-color: var(--color-dark-70) !important;
 }
 
 .top-line {
