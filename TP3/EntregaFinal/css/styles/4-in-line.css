@@ -12,6 +12,9 @@
     padding: 20px;
 
 }
+#canvas-4-in-line {
+    z-index: 5;
+}
 
 .menu-4-in-line-container .submit-btn-container {
     padding-top: 30px;

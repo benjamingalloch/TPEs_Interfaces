@@ -2,7 +2,8 @@ class Board {
     cells = [];
 
     constructor(lineSize, width, height, context, posDrawX, posDrawY, cellSize) {
-        switch (lineSize) {
+        this.lineSize = lineSize;
+        switch (this.lineSize) {
             default: // 4 en linea
                 this.rows = 6;
                 this.columns = 7;
@@ -180,7 +181,7 @@ class Board {
                             break;
                         }
                     }
-                    if (count === this.lineSize) {
+                    if (count == this.lineSize) {
                         return lineCoords;
                     }
                 }
@@ -204,7 +205,7 @@ class Board {
                             break;
                         }
                     }
-                    if (count === this.lineSize) {
+                    if (count == this.lineSize) {
                         return lineCoords;
                     }
                 }
@@ -228,7 +229,7 @@ class Board {
                             break;
                         }
                     }
-                    if (count === this.lineSize) {
+                    if (count == this.lineSize) {
                         return lineCoords;
                     }
                 }
@@ -252,13 +253,12 @@ class Board {
                             break;
                         }
                     }
-                    if (count === this.lineSize) {
+                    if (count == this.lineSize) {
                         return lineCoords;
                     }
                 }
             }
         }
-    
         return null;
     }
 

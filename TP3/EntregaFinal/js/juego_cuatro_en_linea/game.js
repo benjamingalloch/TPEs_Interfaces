@@ -7,17 +7,19 @@ class Game {
     playerZoneWidth = 200;
     playerZoneHeight = 300;
     chipSize = 50;
+    time = 240;
 
     constructor(canvas, context, playerName1, playerName2, lineSize
-        , chipImage1, chipImage2, pileImage1, pileImage2, backgroundImage, time) {
+        , chipImage1, chipImage2, pileImage1, pileImage2, backgroundImage) {
         
-        this.canvasWidth = canvas.width; 
-        this.canvasHeight = canvas.height;
+        this.canvas = canvas;
+        this.canvasWidth = this.canvas.width; 
+        this.canvasHeight = this.canvas.height;
         this.context = context; 
         this.backgroundImage = backgroundImage;
         
-        this.posBoardX = canvasWidth / 2 - this.boardWidth / 2; 
-        this.posBoardY = canvasHeight / 2 - this.boardHeight / 2;
+        this.posBoardX = this.canvasWidth / 2 - this.boardWidth / 2; 
+        this.posBoardY = this.canvasHeight / 2 - this.boardHeight / 2;
 
         this.posPlayerZone1X = this.posBoardX / 2 - this.playerZoneWidth / 2;
         this.posPlayerZone1Y = this.posBoardY + this.boardHeight - this.playerZoneHeight;
@@ -26,6 +28,7 @@ class Game {
         this.posPlayerZone2Y = this.posBoardY + this.boardHeight - this.playerZoneHeight;
         
         // Se crea el tablero
+        console.log(lineSize);
         this.board = new Board(lineSize, this.boardWidth, this.boardHeight, context
                     , this.posBoardX, this.posBoardY, this.chipSize);
 
@@ -46,8 +49,7 @@ class Game {
         
         this.activeChip = null;
 
-        this.time = time; 
-        this.secondsLeft = time;
+        this.secondsLeft = this.time;
         this.intervalId;
         this.startTimer();
     }
@@ -110,6 +112,8 @@ class Game {
                             this.winnerName = this.playerZone2.getName();
                         }
                         this.teamTurn = 0;
+                        this.endGame();
+                        console.log("HAY GANADOR");
                     } else if (this.board.hasEmptyCells()){
                         // Cambiar de turno
                         if (this.teamTurn === 1) {
@@ -118,8 +122,7 @@ class Game {
                             this.teamTurn = 1;
                         }
                     } else {
-                        // Ejecutar un endGame
-                        this.teamTurn = 0;
+                        this.endGame();
                     }
                 }
             }
@@ -147,7 +150,7 @@ class Game {
 
     clearCanvas() {
         this.context.fillStyle = 'transparent';
-        this.context.fillRect(0, 0, canvas.width, canvas.height);
+        this.context.fillRect(0, 0, this.canvasWidth, this.canvasHeight);
     }
 
     drawFrame() {
@@ -195,9 +198,9 @@ class Game {
     }
 
     drawBackground(image) {
-        var escala = canvas.width / image.width;
+        var escala = this.canvasWidth / image.width;
         var x = 0;
-        var y = canvas.height - (image.height * escala) + 90;
+        var y = this.canvasHeight - (image.height * escala) + 90;
         this.context.drawImage(image, x, y, image.width * escala, image.height * escala);
     }
 
