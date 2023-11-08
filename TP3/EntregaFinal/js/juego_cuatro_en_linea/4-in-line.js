@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var btnsBoardSize = document.getElementsByClassName("btn-4-in-line-size");
     var boardSizeSelected = document.getElementById("game-board-size")
     
-    var formulario = document.getElementById("miFormulario");
+    var formulario = document.getElementById("4-in-line-menu");
 
 
     for (var i = 0; i < botones.length; i++) {
@@ -17,7 +17,8 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     }
 
-    formulario.addEventListener("submit", function() {
+    formulario.addEventListener("submit", function(e) {
+      e.preventDefault();
       
     });
   });
