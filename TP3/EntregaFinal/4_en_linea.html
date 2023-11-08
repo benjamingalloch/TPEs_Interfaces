@@ -222,58 +222,99 @@
                 <div id="game-background">
                         <div class="menu-4-in-line-container">
                             <div id="login-form" class="form-container">
-                                <div class="title-fields-legal-container">
                                     
                                         <div class="container form-title">
                                             <h3 class="container">4 en línea</h3>
                                         </div>
-                                        <div class="form-columns-container">
+                                        <form class="title-fields-legal-container" action="">
+                                            <div class="form-columns-container">
+
+                                                <div class="form-fields-container ">
+                                                    <div class="form-row">
+                                                        <div class="form-field">
+                                                            <p class="form-label">Nombre jugador 1</p>
+                                                            <input id="input-4-in-line" class="form-input input" type="text" maxlength="13">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-row">
+                                                        <div class="form-field">
+                                                            <p class="form-label">Ficha</p>
+                                                            <div class="opts-4-in-line">
+                                                                <div id="btn-4-in-line-size" class="form-opt-conteiner">
+                                                                    <button class="login-opt btn-4-in-line-size" value="4">
+                                                                        <img src="images/Ficha_ASTRONAUTA.png" alt="Ficha_ASTRONAUTA">
+                                                                    </button>
+                                                                </div>
+                                                                <div class="form-opt-conteiner">
+                                                                    <button class="login-opt btn-4-in-line-size" value="5">
+                                                                        <img src="images/Ficha_AUTO.png" alt="Ficha_AUTO">
+                                                                    </button>
+                                                                </div>
+                                                                <div class="form-opt-conteiner">
+                                                                    <button class="login-opt btn-4-in-line-size" value="6">
+                                                                        <img src="images/Ficha_COHETE.png" alt="Ficha_COHETE">
+                                                                    </button>
+                                                                </div>
+                                                                <div class="form-opt-conteiner">
+                                                                    <button class="login-opt btn-4-in-line-size" value="7">
+                                                                        <img src="images/Ficha_COMPUTADORA.png" alt="Ficha_COMPUTADORA">
+                                                                    </button>
+                                                                </div>
+                                                                <input type="hidden" id="game-board-size">
+                                                            </div> 
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+                                                </div>
 
 
-                                            <div class="form-fields-container ">
-                                                <div class="form-row">
-                                                    <div class="form-field">
-                                                        <p class="form-label">Nombre jugador 1</p>
-                                                        <input id="input-4-in-line" class="form-input input" type="text" maxlength="13">
+                                                <div class="form-fields-container ">
+                                                    <div class="form-row">
+                                                        <div class="form-field">
+                                                            <p class="form-label">Nombre jugador 2</p>
+                                                            <input class="form-input input" type="text" maxlength="13"> 
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <div class="form-row">
-                                                    <div class="form-field">
-                                                        <p class="form-label">Ficha</p>
-                                                        <div class="opts-4-in-line">
-                                                            <div id="btn-4-in-line-size" class="form-opt-conteiner">
-                                                                <button class="login-opt btn-4-in-line-size" value="4">
-                                                                    <img src="" alt="">
-                                                                </button>
-                                                            </div>
-                                                            <div class="form-opt-conteiner">
-                                                                <button class="login-opt btn-4-in-line-size" value="5">8 X 7</button>
-                                                            </div>
-                                                            <div class="form-opt-conteiner">
-                                                                <button class="login-opt btn-4-in-line-size" value="6">9 X 8</button>
-                                                            </div>
-                                                            <div class="form-opt-conteiner">
-                                                                <button class="login-opt btn-4-in-line-size" value="7">10 X 9</button>
-                                                            </div>
-                                                            <input type="hidden" id="game-board-size">
-                                                        </div> 
+                                                    <div class="form-row">
+                                                        <div class="form-field">
+                                                            <p class="form-label">Ficha</p>
+                                                            <div class="opts-4-in-line">
+                                                                <div id="btn-4-in-line-size" class="form-opt-conteiner">
+                                                                    <button class="login-opt btn-4-in-line-size" value="4">
+                                                                        <img src="images/Ficha_ASTRONAUTA.png" alt="Ficha_ASTRONAUTA">
+                                                                    </button>
+                                                                </div>
+                                                                <div class="form-opt-conteiner">
+                                                                    <button class="login-opt btn-4-in-line-size" value="5">
+                                                                        <img src="images/Ficha_AUTO.png" alt="Ficha_AUTO">
+                                                                    </button>
+                                                                </div>
+                                                                <div class="form-opt-conteiner">
+                                                                    <button class="login-opt btn-4-in-line-size" value="6">
+                                                                        <img src="images/Ficha_COHETE.png" alt="Ficha_COHETE">
+                                                                    </button>
+                                                                </div>
+                                                                <div class="form-opt-conteiner">
+                                                                    <button class="login-opt btn-4-in-line-size" value="7">
+                                                                        <img src="images/Ficha_COMPUTADORA.png" alt="Ficha_COMPUTADORA">
+                                                                    </button>
+                                                                </div>
+                                                                <input type="hidden" id="game-board-size">
+                                                            </div> 
+                                                        </div>
                                                     </div>
+                                                    
+                                                    
+                                                    
+                                                    <!------------ Submit button -------------->
+                                                    
                                                 </div>
-                                                
-                                                
                                             </div>
 
-
-                                            <div class="form-fields-container ">
-                                                <div class="form-row">
-                                                    <div class="form-field">
-                                                        <p class="form-label">Nombre jugador 2</p>
-                                                        <input class="form-input input" type="text" maxlength="13"> 
-                                                    </div>
-                                                </div>
-                                                <div class="form-row">
-                                                    <div class="form-field">
-                                                        <p class="form-label">Ficha</p>
+                                            <div class="form-row top-line">
+                                                <div class="form-field">
+                                                    <p class="form-label">Tamaño del tablero</p>
                                                         <div class="opts-4-in-line">
                                                             <div id="btn-4-in-line-size" class="form-opt-conteiner">
                                                                 <button class="login-opt btn-4-in-line-size" value="4">7 X 6</button>
@@ -289,53 +330,29 @@
                                                             </div>
                                                             <input type="hidden" id="game-board-size">
                                                         </div> 
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="form-field">
+                                                    <div class="submit-btn-container">
+                                                        <button id="btn-toPlay" class="">
+                                                            <h3 class="light-80">JUGAR</h3>
+                                                            <span></span>
+                                                            <span></span>
+                                                        </button>
                                                     </div>
                                                 </div>
-                                                
-                                                
-                                                
-                                                <!------------ Submit button -------------->
-                                                
                                             </div>
 
-                                            
-                                        </div>
+                                        </form>
+                                        
 
-                                        <div class="form-row top-line">
-                                            <div class="form-field">
-                                                <p class="form-label">Tamaño del tablero</p>
-                                                    <div class="opts-4-in-line">
-                                                        <div id="btn-4-in-line-size" class="form-opt-conteiner">
-                                                            <button class="login-opt btn-4-in-line-size" value="4">7 X 6</button>
-                                                        </div>
-                                                        <div class="form-opt-conteiner">
-                                                            <button class="login-opt btn-4-in-line-size" value="5">8 X 7</button>
-                                                        </div>
-                                                        <div class="form-opt-conteiner">
-                                                            <button class="login-opt btn-4-in-line-size" value="6">9 X 8</button>
-                                                        </div>
-                                                        <div class="form-opt-conteiner">
-                                                            <button class="login-opt btn-4-in-line-size" value="7">10 X 9</button>
-                                                        </div>
-                                                        <input type="hidden" id="game-board-size">
-                                                    </div> 
-                                            </div>
-                                        </div>
-                                        <div class="form-row">
-                                            <div class="form-field">
-                                                <div class="submit-btn-container">
-                                                    <button id="btn-toPlay" class="">
-                                                        <h3 class="light-80">JUGAR</h3>
-                                                        <span></span>
-                                                        <span></span>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        
 
 
                                    
-                                </div>
+                               
                                 <!------------ Register button -------------->
                                 
                             </div>
