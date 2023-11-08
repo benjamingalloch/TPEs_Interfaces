@@ -181,7 +181,7 @@ class Board {
                             break;
                         }
                     }
-                    if (count == this.lineSize) {
+                    if (count === this.lineSize) {
                         return lineCoords;
                     }
                 }
@@ -205,7 +205,7 @@ class Board {
                             break;
                         }
                     }
-                    if (count == this.lineSize) {
+                    if (count === this.lineSize) {
                         return lineCoords;
                     }
                 }
@@ -229,7 +229,7 @@ class Board {
                             break;
                         }
                     }
-                    if (count == this.lineSize) {
+                    if (count === this.lineSize) {
                         return lineCoords;
                     }
                 }
@@ -253,12 +253,13 @@ class Board {
                             break;
                         }
                     }
-                    if (count == this.lineSize) {
+                    if (count === this.lineSize) {
                         return lineCoords;
                     }
                 }
             }
         }
+    
         return null;
     }
 

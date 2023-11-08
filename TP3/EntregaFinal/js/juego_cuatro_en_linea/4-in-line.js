@@ -17,9 +17,9 @@ document.addEventListener("DOMContentLoaded", function() {
     let canvasHeight = canvas.height;
     let game = null;
     
-    var form = document.getElementById("4-in-line-menu");
+    let form = document.getElementById("4-in-line-menu");
 
-    var btn_to_play = document.getElementById("btn-to-play");
+    let btn_to_play = document.getElementById("btn-to-play");
 
 
     for (var i = 0; i < btnsBoardSize.length; i++) {
@@ -83,12 +83,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     btn_to_play.addEventListener("click", function(e) {
-      console.log(boardSizeInput.value);
-      console.log(chipP1Input);
-      console.log(chipP2Input);
-      console.log(nameP1Input.value);
-      console.log(nameP2Input.value);
-      console.log();
       e.preventDefault();
       if ((nameP1Input.value) && (nameP2Input.value) && (boardSizeInput.value) && (chipP1Input.value) && (chipP2Input.value)) { // Si todo esta seteado
         console.log("Iniciando juego");
@@ -96,6 +90,10 @@ document.addEventListener("DOMContentLoaded", function() {
         menu.classList.add("hidden");
         // Se muestra el canvas
         canvas.classList.remove("hidden");
+
+        let game_opts = document.querySelector(".actions-4-in-line-container");
+        game_opts.classList.remove("hidden");
+
 
         let image_chip_p1 = new Image();
         image_chip_p1.src = "./images/" + chipP1Input.value + "";
@@ -163,5 +161,22 @@ document.addEventListener("DOMContentLoaded", function() {
         canvas.addEventListener('mouseup', function(e) {
             game.onMouseUp(e);
         }, false);
+
+        let game_opts = document.querySelector(".actions-4-in-line-container");
+        let btn_menu = document.getElementById("btn-to-menu-4-in-line");
+        let btn_reset = document.getElementById("btn-to-reset-4-in-line");
+
+        btn_menu.addEventListener("click", function(e) {
+            game.endGame();
+            game = null;
+            game_opts.classList.add("hidden");
+            canvas.classList.add("hidden");
+            menu.classList.remove("hidden");
+            form.reset();
+        });
+
+        btn_reset.addEventListener("click", function(e) {
+            game.reset();
+        });
     }    
 });
