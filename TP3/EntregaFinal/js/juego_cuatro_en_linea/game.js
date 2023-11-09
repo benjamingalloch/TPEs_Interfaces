@@ -2,11 +2,11 @@ class Game {
     winnerName = 0;
     isMouseDown = false;
     
-    boardWidth = 550;
-    boardHeight = 500;
+    boardWidth = 400;
+    boardHeight = 350;
     playerZoneWidth = 200;
-    playerZoneHeight = 300;
-    chipSize = 50;
+    playerZoneHeight = 250;
+    chipSize = 35;
     time = 240;
 
     constructor(canvas, context, playerName1, playerName2, lineSize

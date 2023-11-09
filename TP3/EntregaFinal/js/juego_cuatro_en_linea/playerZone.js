@@ -109,8 +109,8 @@ class PlayerZone {
     }
 
     drawPile() {
-        let desiredWidth = 115;
-        let desiredHeight = 120;
+        let desiredWidth = 90;
+        let desiredHeight = 95;
     
         let pileX = this.posDrawX + (this.width - desiredWidth) / 2;
         let pileY = this.posDrawY + (this.height - desiredHeight) - 20;

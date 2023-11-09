@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var nameP2Input = document.getElementById("input-4-in-line-name-p2");
 
     var menu = document.querySelector(".menu-4-in-line-container");
+    var btns_menu = document.querySelectorAll(".actions-4-in-line-container");
 
     // Canvas
     let canvas = document.getElementById('canvas-4-in-line');
@@ -90,9 +91,10 @@ document.addEventListener("DOMContentLoaded", function() {
         menu.classList.add("hidden");
         // Se muestra el canvas
         canvas.classList.remove("hidden");
-
-        let game_opts = document.querySelector(".actions-4-in-line-container");
-        game_opts.classList.remove("hidden");
+        // Se muestran las opciones del juego
+        btns_menu.forEach(btn => {
+          btn.classList.remove("hidden");
+        });
 
 
         let image_chip_p1 = new Image();
@@ -162,14 +164,15 @@ document.addEventListener("DOMContentLoaded", function() {
             game.onMouseUp(e);
         }, false);
 
-        let game_opts = document.querySelector(".actions-4-in-line-container");
         let btn_menu = document.getElementById("btn-to-menu-4-in-line");
         let btn_reset = document.getElementById("btn-to-reset-4-in-line");
 
         btn_menu.addEventListener("click", function(e) {
             game.endGame();
             game = null;
-            game_opts.classList.add("hidden");
+            btns_menu.forEach(btn => {
+              btn.classList.add("hidden");
+            });
             canvas.classList.add("hidden");
             menu.classList.remove("hidden");
             form.reset();
