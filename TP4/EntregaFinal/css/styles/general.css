@@ -1,10 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
 * {
     margin:0;
     padding:0;
     font-size:100%;
     background: transparent;
+    box-sizing: border-box;
+}
+
+html {
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 body {
-    width: 100%;
+    width: 1280px;
+}
+
+footer {
+    background-color: #5E5E5D;
+    color: rgba(255, 255, 255, 0.9);
+    padding-bottom: 120px;
+}
+
+.container {
+    width: 1080px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+a {
+    color: inherit;
+}
+
+/* ------------------------------------------------------------------------ */
+p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    line-height: 18.9px;
+    font-size: 20px;
+}
+
+button {
+    background-color: rgb(255, 233, 1);
+}
+
+button p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    color: rgb(2, 24, 126);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(2, 24, 126);
+
+}
+
+/* ------------------------------------------------------------------------ */
+
+.color-light-dark {
+    background-color: #242424;
+}
+
+.btn-border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    border-radius: 200px;
+    border: solid 8px rgb(41, 130, 255);
+    box-shadow: 4px 5px rgb(2, 24, 126);
+}
+
+.btn-border input {
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.39);
+    padding: 32px 0 32px 44px;
+    width: 554px;
 }

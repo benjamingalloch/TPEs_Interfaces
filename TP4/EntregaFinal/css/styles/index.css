@@ -1,0 +1,15 @@
+.legal-info-container {
+    width: 820px;
+    padding: 38px 0;
+}
+
+.legal-info-container div {
+    display: flex;
+    padding-top: 20px;
+    gap: 5px;
+}
+
+.legal-info-container p {
+    letter-spacing: 2px;
+    word-spacing: 3px;
+}
