@@ -349,3 +349,24 @@
     letter-spacing: 2px;
     word-spacing: 3px;
 }
+
+/* -------------------------------- SPRITE ANIMATIONS  ---------------------------------------- */
+
+#animation-miles {
+    position: absolute;
+    width: 72.18px;
+    height: 130px;
+    transform: translate(-370px, 1130px);
+    background-image: url("../../images/sprite2_miles.png");
+    animation: sprite-animation-miles 1.1s steps(11) infinite;
+    animation-direction: reverse;
+}
+@keyframes sprite-animation-miles {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: 798px;
+    }
+}
+

@@ -24,6 +24,7 @@ nav {
 }
 
 .burger div {
+    position: relative;
     background-color: rgb(255, 233, 1);
     border: solid 4px rgb(41, 129, 255);
     border-radius: 6px;
@@ -31,13 +32,11 @@ nav {
     width: 42px;
     box-shadow: 4px 5px rgba(2, 24, 126, 1);
 }
-
 .line1.active {
     position: relative;
     top: 12px;
     animation: top 0.3s ease both;
 }
-
 .line2.active {
     position: relative;
     height: 4px;
@@ -49,7 +48,6 @@ nav {
     border: none;
     box-shadow: none;
 }
-
 .line3.active {
     position: relative;
     bottom: 4px;
@@ -63,15 +61,12 @@ nav {
     0% {
         top: 0px;
     }
-
     33% {
         top: 12px;
     }
-
     66% {
         transform: rotate(0deg);
     }
-
     100% {
         transform: rotate(45deg);
     }
@@ -96,15 +91,12 @@ nav {
     0% {
         bottom: 0px;
     }
-
     33% {
         bottom: 4px;
     }
-
     66% {
         transform: rotate(0deg);
     }
-
     100% {
         transform: rotate(-45deg);
     }
