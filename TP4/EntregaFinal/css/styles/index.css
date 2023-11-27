@@ -1,3 +1,298 @@
+/* ----------------------------------------- Spidey section --------------------------------------------- */
+.spidey-polygon {
+    display: flex;
+    flex-direction: column;
+    width: 1280px;
+    height: 845px;
+    gap: 42px;
+    padding: 220px 100px;
+    background-color: #8F6AA6;
+    color: white;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
+    position: relative;
+}
+
+.spidey-polygon .container {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+.spidey-polygon p {
+    word-spacing: 1.5px;
+    line-height: 24px;
+}
+.spidey-polygon h1 {
+    width: 648px;
+}
+.spidey-polygon p {
+    width: 586px;
+}
+
+#screen-main {
+    position: absolute;
+    
+    transform: translate(-165px, 335px);
+    z-index: 2;
+}
+#goblin {
+    position: absolute;
+    transform: translate(350px, 180px);
+    z-index: 3;
+}
+
+
+/* -------------------------------- ghost- Los vengadores acompañando tu aventura ---------------------------------------- */
+
+.card-screen-conteiner {
+    display: flex;
+    padding: 221px 0 113px 0;
+    gap: 40px;
+}
+
+.card-screen {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+.card-screen img {
+    width:fit-content;
+}
+
+.card-screen p {
+    width: 333px;
+}
+
+/* -------------------------------- ghost- Los vengadores acompañando tu aventura ---------------------------------------- */
+
+.ghost-avengers-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 1397px;
+}
+
+#test_1 {
+    position: absolute;
+    top: -160px;
+    left: 50px;
+}
+#test_2 {
+    position: absolute;
+    top: -35px;
+    left: 50px;
+}
+#test_3 {
+    position: absolute;
+    top: 185px;
+    left: 50px;
+    z-index: 1;
+}
+
+.ghost-container {
+    
+}
+
+.avengers-polygon {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    background-color: black;
+    color: white;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 90%);
+    position: absolute;
+    bottom: 0;
+    height: 923px;
+    width: 1280px;
+    padding: 280px 100px;
+    
+}
+
+.avengers-polygon h1 {
+    width: 650px;
+}
+
+#vengadores-1 {
+    position: absolute;
+    transform: translate(0px, 710px);
+    width: 1077px;
+    z-index: 1;
+}
+#vengadores-2 {
+    position: absolute;
+    transform: translate(-230px, 690px);
+    z-index: 3;
+}
+#vengadores-3 {
+    position: absolute;
+    transform: translate(150px, 500px);
+    z-index: 3;
+}
+#vengadores-4 {
+    position: absolute;
+    transform: translate(360px, 790px);
+    z-index: 3;
+}
+#vengadores-5 {
+    position: absolute;
+    transform: translate(0px, 710px);
+    z-index: 4;
+}
+#vengadores-6 {
+    position: absolute;
+    transform: translate(0px, 710px);
+    z-index: 2;
+}
+
+
+
+/* -------------------------------- MAS AMIGOS MAS DIVERSION ---------------------------------------- */
+.screenshoots-tittle-container{
+    display: flex;
+    flex-direction: column;
+    gap: 69px;
+    padding: 260px 0 70px 0;
+}
+
+.screenshoots-container {
+    display: flex;
+    gap: 57px;
+}
+
+.screenshoots-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.screenshoots-text-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.screenshoot-row-container img {
+    height: fit-content;
+}
+
+
+/* -------------------------------- UN GRAN PODER... ---------------------------------------- */
+.buy-container {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    padding: 30px 0;
+    background-color: black;
+    color: white;
+
+}
+
+#btn-buy {
+    height: 50px;
+    border: none;
+    padding: 0 30px;
+}
+
+.polygon-section {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+
+.buy-polygon {
+    display: flex;
+    flex-direction: column;
+    gap: 42px;
+    background-color: black;
+    color: white;
+    padding: 120px;
+    clip-path: polygon(0 0, 100% 15%, 100% 75%, 0% 100%);
+  }
+
+/* -------------------------------- JUMPING CHARACTERS ---------------------------------------- */
+.characters-container {
+    height: 624px;
+    padding: 50px 0 50px 0;
+    position: relative;
+}
+
+.characters-container :first-child {
+    position: absolute;
+    left: 90px;
+    width: 268px;
+    height: 416.5px;
+}
+
+.characters-container :nth-child(2) {
+    position: absolute;
+    left: 294px;
+    width: 416.5px;
+    height: 457.5px;
+}
+
+.characters-container :nth-child(3) {
+    position: absolute;
+    right: 89.5px;
+    width: 313.5px;
+    height: 398.5px;
+}
+
+
+
+/* -------------------------------- BOTTOM ---------------------------------------- */
+
+.btn-border input {
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    background-color: white;
+    padding-left: 44px;
+    height: 84px;
+    width: 554px;
+    letter-spacing: 2px;
+}
+.btn-border input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#btn-subscribe {
+    height: 84px;
+    border: none;
+    padding: 0 30px 0 20px;
+    border-left: solid 8px rgb(41, 130, 255);
+}
+
+.bottom-section {
+    height: 1296px;
+    position: relative;
+    background-image: linear-gradient(#8FBEFC, #F7E3D8);
+}
+
+.bottom-tittle-container {
+    width: 816px;
+    padding: 152px 0 46px 0;
+    text-align: center;
+}
+
+.conditions-container {
+    padding-top: 39px;
+}
+
+.conditions-container div{
+    width: 578px;
+    padding-bottom: 17px;
+}
+
+.buildings-container {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+}
+
+/* -------------------------------- FOOTER  ---------------------------------------- */
+
 .legal-info-container {
     width: 820px;
     padding: 38px 0;
