@@ -70,7 +70,8 @@
 }
 #goblin {
     position: absolute;
-    transform: translate(350px, 180px);
+    top: 30px;
+    transform: translate(350px, 0);
     z-index: 3;
 }
 
@@ -79,7 +80,7 @@
 
 .card-screen-conteiner {
     display: flex;
-    padding: 221px 0 123px 0;
+    padding: 260px 0 123px 0;
     gap: 40px;
 }
 
@@ -308,7 +309,13 @@
 
 
 /* -------------------------------- BOTTOM ---------------------------------------- */
-
+.aux-polygon {
+    display: flex;
+    width: 1280px;
+    height: 122px;
+    background-color: #8FBEFC;
+    clip-path: polygon(0 0, 100% 100%, 100% 100%, 0% 100%);
+}
 .btn-border input {
     border: none;
     font-family: 'Lato', sans-serif;

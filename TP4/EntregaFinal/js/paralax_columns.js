@@ -1,40 +1,40 @@
-const textoContainer = document.querySelector('.screenshoots-text-column');
-const textos = textoContainer.querySelectorAll('div');
+const textContainer = document.querySelector('.screenshoots-text-column');
+const texts = textContainer.querySelectorAll('div');
 const imagenContainer = document.querySelector('.screenshoots-column');
-const imagenes = imagenContainer.querySelectorAll('div');
+const images = imagenContainer.querySelectorAll('div');
 
 window.addEventListener('scroll', function() {
-    textosPasadores();
+    textsPassing();
 }); 
 
 
-function textosPasadores() {
+function textsPassing() {
     
-    var textoVisible = false;
-    var imagenVisible = false;
+    var visibleText = false;
+    var visibleImage = false;
 
-    textos.forEach(texto => {
-        texto.style.opacity = 0;
+    texts.forEach(text => {
+        text.style.opacity = 0;
     });
-    imagenes.forEach(imagen => {
-        imagen.style.display = 'none';
+    images.forEach(image => {
+        image.style.display = 'none';
     });
 
     var i = 0;
     var distanceToChange = 140; // determina la distancia al tope de la pantalla a la que cambia el texto
-    while (!textoVisible && !imagenVisible) {
-        if (i >= textos.length) {
-            textoVisible = textos[textos.length-1];
-            imagenVisible = imagenes[imagenes.length-1];
+    while (!visibleText && !visibleImage) {
+        if (i >= texts.length) {
+            visibleText = texts[texts.length-1];
+            visibleImage = images[images.length-1];
         } else {
-            if (textos[i].getBoundingClientRect().top > distanceToChange) {
-                textoVisible = textos[i];
-                imagenVisible = imagenes[i];
+            if (texts[i].getBoundingClientRect().top > distanceToChange) {
+                visibleText = texts[i];
+                visibleImage = images[i];
             }
         }
         i++;
     }
     
-    imagenVisible.style.display = 'block';
-    textoVisible.style.opacity = 1;
+    visibleImage.style.display = 'block';
+    visibleText.style.opacity = 1;
 }
