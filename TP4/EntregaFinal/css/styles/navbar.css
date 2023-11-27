@@ -1,0 +1,111 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    width: 1280px;
+    height: 90px;
+    background-color: rgb(84, 153, 248);
+
+}
+
+#nav-shadow {
+    position: absolute;
+    height: 12px;
+    width: 1280px;
+    background-image: linear-gradient(rgba(84, 153, 248, 1), rgba(84, 153, 248, 0));
+}
+
+.burger {
+    position: relative;
+}
+.burger:hover {
+    cursor: pointer;
+}
+
+.burger div {
+    background-color: rgb(255, 233, 1);
+    border: solid 4px rgb(41, 129, 255);
+    border-radius: 6px;
+    height: 12px;
+    width: 42px;
+    box-shadow: 4px 5px rgba(2, 24, 126, 1);
+}
+
+.line1.active {
+    position: relative;
+    top: 12px;
+    animation: top 0.3s ease both;
+}
+
+.line2.active {
+    position: relative;
+    height: 4px;
+    top: 4px;
+    left: 4px;
+    width: 34px;
+    z-index: 1;
+    animation: middle 0.3s ease both;
+    border: none;
+    box-shadow: none;
+}
+
+.line3.active {
+    position: relative;
+    bottom: 4px;
+    animation: bottom 0.3s ease both;
+}
+.line1.active, .line2.active, .line3.active {
+    box-shadow: none !important;
+}
+
+@keyframes top {
+    0% {
+        top: 0px;
+    }
+
+    33% {
+        top: 12px;
+    }
+
+    66% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes middle {
+    0% {
+        left: 4px;
+    }
+    33% {
+        left: 4px;
+    }
+    66% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes bottom {
+    0% {
+        bottom: 0px;
+    }
+
+    33% {
+        bottom: 4px;
+    }
+
+    66% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-45deg);
+    }
+}

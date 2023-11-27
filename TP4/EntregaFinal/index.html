@@ -9,25 +9,46 @@
 <body>
     <header>
         <nav>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+
+            <div class="btn-border">
+                <button id="btn-buy"><p>COMPRAR</p></button>
+            </div>
             
         </nav>
+        <div id="nav-shadow"></div>
     </header>
 
     <main>
 
-        <section class="polygon-section">
-            
-            <div class="spidey-polygon">
-                <div class="container">
-                    <h1>Conoce a Spidey y sus sorprendentes amigos</h1>
-                    <p>Spidey, nuestro lanzador de telarañas favorito se une a Ghost-Spider (Gwen Stacey) y Miles Morales para formar el equipo de Spidey, con la ayuda del cómico pero leal robot de Spidey, TRACE-E. Si Spidey se encuentra en una situación difícil donde necesita aún más poder de superhéroe, tengan la seguridad de que un amigo de los Vengadores correrá para ayudar.</p>
-                </div>
-            </div>
-                <img id="screen-main" src="./images/screenshoot_main.png" alt="">
-                <img id="goblin" src="./images/green_goblin.png" alt="">
-        </section>
-        
+        <div id="top-relative">
+            <section >
+                <div id="top-page-container">
+                    <img src="./images/background_1.png" alt="">
+                    <img id="buildings-left" src="./images/left_buildings_blur.png" alt="">
+                    <img id="buildings-center" src="./images/center_buildings_blur.png" alt="">
+                    <img id="buildings-right" src="./images/right_buildings_blur.png" alt="">    
 
+                </div>
+                
+            </section>
+
+            <section class="polygon-section spidey-absolute">
+                <div class="spidey-polygon">
+                    <div class="container">
+                        <h1>Conoce a Spidey y sus sorprendentes amigos</h1>
+                        <p>Spidey, nuestro lanzador de telarañas favorito se une a Ghost-Spider (Gwen Stacey) y Miles Morales para formar el equipo de Spidey, con la ayuda del cómico pero leal robot de Spidey, TRACE-E. Si Spidey se encuentra en una situación difícil donde necesita aún más poder de superhéroe, tengan la seguridad de que un amigo de los Vengadores correrá para ayudar.</p>
+                    </div>
+                </div>
+                    <img id="screen-main" src="./images/screenshoot_main.png" alt="">
+                    <img id="goblin" src="./images/green_goblin.png" alt="">
+            </section>
+        </div>
+    
         <section>
             <div class="container card-screen-conteiner">
                 <div class="card-screen">
@@ -205,6 +226,7 @@
 
 
     </footer>
-    
+    <script src="./js/burger_menu.js"></script>
+
 </body>
 </html>

@@ -1,4 +1,39 @@
 /* ----------------------------------------- Spidey section --------------------------------------------- */
+#top-relative {
+    position: relative;
+    height: 1510px;
+}
+
+#top-page-container {
+    display: flex;
+    position: relative;
+    height: 720px;
+    width: 1280px;
+    overflow: hidden;
+    background-color: red;
+}
+#top-page-container img {
+}
+
+#buildings-left {
+    position: absolute;
+    transform: translate(-58px, 15px);
+}
+#buildings-center {
+    position: absolute;
+    transform: translate(382px, 505px);
+}
+#buildings-right {
+    position: absolute;
+    transform: translate(903px, 0px);
+}
+
+/* ----------------------------------------- Spidey section --------------------------------------------- */
+.spidey-absolute {
+    position: absolute;
+    transform: translate(0px, -84.5px);
+}
+
 .spidey-polygon {
     display: flex;
     flex-direction: column;
@@ -30,7 +65,6 @@
 
 #screen-main {
     position: absolute;
-    
     transform: translate(-165px, 335px);
     z-index: 2;
 }
@@ -41,11 +75,11 @@
 }
 
 
-/* -------------------------------- ghost- Los vengadores acompañando tu aventura ---------------------------------------- */
+/* -------------------------------- cards ---------------------------------------- */
 
 .card-screen-conteiner {
     display: flex;
-    padding: 221px 0 113px 0;
+    padding: 221px 0 123px 0;
     gap: 40px;
 }
 
@@ -190,6 +224,10 @@
     border: none;
     padding: 0 30px;
 }
+#btn-buy:hover {
+    cursor: pointer;
+}
+
 
 .polygon-section {
     margin: 0;
@@ -262,6 +300,9 @@
     border: none;
     padding: 0 30px 0 20px;
     border-left: solid 8px rgb(41, 130, 255);
+}
+#btn-subscribe:hover {
+    cursor: pointer;
 }
 
 .bottom-section {
