@@ -1,3 +1,33 @@
 @import url('./styles/general.css');
 @import url('./styles/index.css');
 @import url('./styles/navbar.css');
+
+.container2 {
+    position: relative;
+    display: flex;
+    width: 700px;
+    background-color: wheat;
+}
+.imagenes {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: aqua;
+    padding: 300px 0;
+}
+
+.imagenes img { 
+    position: sticky;
+    top: 40vh;
+}
+.textos {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    font-size: 25px;
+    width: 50%;
+    padding: 200px 0;
+}
+.textos p {
+    transition: opacity 0.2s ease;
+}
