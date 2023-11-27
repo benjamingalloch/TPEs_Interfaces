@@ -62,8 +62,41 @@ p {
     font-size: 20px;
 }
 
+@keyframes buy-hover-color {
+    from {
+        background-color: rgb(255, 233, 1);
+    }
+    to {    
+        background-color: rgb(225, 200, 15)
+    }
+}
 button {
     background-color: rgb(255, 233, 1);
+}
+button:hover {
+    animation: buy-hover-color 0.2s ease both;
+}
+
+@keyframes buy-hover-border {
+    from {
+        border: solid 8px rgb(41, 130, 255);
+    }
+    to {
+        border: solid 8px rgb(14, 114, 255);
+    }
+}
+.btn-border {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    border-radius: 200px;
+    border: solid 8px rgb(41, 130, 255);
+    box-shadow: 4px 5px rgb(2, 24, 126);
+    overflow: hidden;
+}
+.btn-border:hover {
+animation: buy-hover-border 0.2 ease both;
 }
 
 button p {
@@ -93,16 +126,6 @@ header {
     background-color: black;
 }
 
-.btn-border {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    border-radius: 200px;
-    border: solid 8px rgb(41, 130, 255);
-    box-shadow: 4px 5px rgb(2, 24, 126);
-    overflow: hidden;
-}
 
 .btn-border input:focus {
     outline: none;
