@@ -101,7 +101,7 @@
 }
 
 .animation-card {
-    animation: fadeInUp 1.5s ease-out forwards ;
+    animation: fadeInUp 2s ease-out forwards ;
 }
 
 @keyframes fadeInUp {
@@ -411,15 +411,65 @@
     height: 130px;
     transform: translate(-370px, 1130px);
     background-image: url("../../images/sprite2_miles.png");
-    animation: sprite-animation-miles 1.1s steps(11) infinite;
-    animation-direction: reverse;
 }
 @keyframes sprite-animation-miles {
     from {
         background-position: 0px;
     }
     to {
-        background-position: 798px;
+        background-position: -790px;
     }
 }
+#animation-miles:hover {
+    animation: sprite-animation-miles 1.1s steps(11) infinite;
+    cursor: pointer;
+}
 
+#animation-gwen {
+    position: absolute;
+    width: 80px;
+    height: 100px;
+    transform: translate(-30px, 1043px);
+    background-image: url("../../images/sprite3_gwen.png");
+    background-position: 153.4px;
+}
+@keyframes sprite-animation-gwen {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -520px;
+    }
+}
+#animation-gwen:hover {
+    animation: sprite-animation-gwen 1s steps(6) infinite;
+    cursor: pointer;
+}
+
+#animation-peter {
+    position: absolute;
+    width: 75px;
+    height: 100px;
+    transform: translate(400px, 970px) scaleX(-1);
+    background-image: url("../../images/sprite1_peter.png");
+    background-position: 75px;
+}
+@keyframes sprite-animation-peter {
+    from {
+        background-position: 0px;
+    }
+    to {
+        background-position: -750px;
+    }
+}
+#animation-peter:hover {
+    animation: sprite-animation-peter 1.3s steps(10) infinite;
+    cursor: pointer;
+}
+
+#logo-header {
+    position: absolute;
+    top: 91px;
+    right: calc((1280px - 590px) / 2);
+    width: 590px;
+}

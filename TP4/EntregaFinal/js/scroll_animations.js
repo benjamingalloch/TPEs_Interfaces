@@ -6,8 +6,9 @@ const images = imagenContainer.querySelectorAll('div');
 window.addEventListener('scroll', function() {
     textsPassing();
     animationCards();
+    scrollDelayGoblin();
+    escalarLogo();
 }); 
-
 
 function textsPassing() {
     
@@ -62,10 +63,47 @@ function animateCard(card, delay) {
 function animationCards() {
     if(isElementInViewport(cardsContainer)){
         cards.forEach((card, index) => {
-            const delay = index * 600; 
+            const delay = index * 700; 
             animateCard(card, delay);
         });
     }
 }
 
+const item  = document.querySelector("#goblin");
+
+function scrollDelayGoblin() {
+    
+    var scroll = window.scrollY;
+    var factor = 0.1; // Puedes ajustar este valor según sea necesario
+
+    var displacement = scroll * factor;
+
+    item.style.transform = 'translate(350px, ' + displacement + 'px)';
+}
+
+const logo = document.querySelector("#logo-header");
+
+function escalarLogo() {
+    var scroll = window.scrollY;
+    var factorVelocidadEscalado = -0.002;
+    var factorPosTop = -0.21;
+
+    var escala = 1 + scroll * factorVelocidadEscalado;
+
+    const minEscalado = 133 / 590;
+
+    escala = Math.max(minEscalado, escala);
+
+    if (escala == minEscalado) {
+        logo.style.width = '133px';
+        logo.style.right = 'calc((1280px - ' + 133 + 'px) / 2)';
+        logo.style.top = '9px'
+    } else {
+        logo.style.width = 590 * escala + 'px';
+        logo.style.right = 'calc((1280px - ' + 590 * escala + 'px) / 2)';
+        logo.style.top =  91 + scroll * factorPosTop + 'px';
+    }
+};
+
+escalarLogo();
 
