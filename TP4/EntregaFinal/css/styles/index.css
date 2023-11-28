@@ -81,79 +81,102 @@
 /*--GWEN--*/
 @keyframes fadeInGwen {
     from {
-        transform: translate(-340px, 70px);
+        left: -200px;
+        top: -100px;
     }
     to {
-        transform: translate(90px, 265px);
+        left: 0;
+        top: 0;
     }
 }
 
 /*--MILES--*/
 @keyframes fadeInMiles {
     from {
-        transform: translate(1265px, 70px);
+        left: 500px;
+        top: -100px;
     }
     to {
-        transform: translate(700px, 220px);
+        left: 0;
+        top: 0;
     }
 }
 @keyframes fadeInMilesSpiderweb {
     from {
-        transform: translate(1555px, 123px);
+        left: 500px;
+        top: -100px;
     }
     to {
-        transform: translate(990px, 273px);
+        left: 0;
+        top: 0;
     }
 }
 
 /*--PETER--*/
 @keyframes fadeInPeter {
     0% {
-        transform: translate(604px, 365px) scale(0);
+        left: 500px;
+        top: 400px;
+        width: 0;
     }
     50% {
-        transform: translate(504px, 165px) scale(0.5);
+        left: 50;
+        top: -100px;
+        width: 233px;
+
     }
     100% {
-        transform: translate(404px, 265px) scale(1);
+        left: 0;
+        top: 0;
+        width: 465px;
     }
 }
 @keyframes fadeInPeterSpiderweb {
     0% {
-        transform: translate(305px, 345px) scale(0);
+        left: 600px;
+        top: 100px;
+        width: 0;
     }
     50% {
-        transform: translate(290px, 125px) scale(0);
+        left: 910px;
+        top: 80px;
+        width: 0;
     }
     100% {
-        transform: translate(-195px, 245px) scale(1);
+        left: 0;
+        top: 0;
+        width: 758px;
     }
 }
 /*--BUILDINGS LEFT--*/
 @keyframes fadeInBuildingsLeft {
     from {
-        transform: translate(-108px, 80px) scale(0.8);
+        left: -100px;
+        top: 100px;
     }
     to {
-        transform: translate(-58px, 15px) scale(1);
+        left: 0;
+        top: 0;
     }
 }
 /*--BUILDINGS CENTER--*/
 @keyframes fadeInBuildingsCenter {
     from {
-        transform: translate(382px, 605px) scale(0.8);
+        top: 100px;
     }
     to {
-        transform: translate(382px, 505px) scale(1);
+        top: 0;
     }
 }
 /*--BUILDINGS RIGHT--*/
 @keyframes fadeInBuildingsRight {
     from {
-        transform: translate(953px, 65px) scale(0.8);
+        left: 100px;
+        top: 100px;
     }
     to {
-        transform: translate(903px, 0px) scale(1);
+        left: 0;
+        top: 0;
     }
 }    
 

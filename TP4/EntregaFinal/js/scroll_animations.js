@@ -90,7 +90,7 @@ function scrollDelayGoblin() {
 
 function scrollDelayGwenCards() {
     gwenCards.forEach(card => {
-        if (isElementInViewport(card, 100)) {
+        if (isElementInViewport(card, 0)) {
             var scroll = window.scrollY;
             var factor = 0.07; // Puedes ajustar este valor según sea necesario
 
@@ -100,7 +100,7 @@ function scrollDelayGwenCards() {
         }
     }); 
 }
-scrollDelayGwenCards();
+
 
 
 //-----------------------------------------------------------------------------------
@@ -144,22 +144,23 @@ const spiderwebPeter = document.querySelector("#spiderweb-peter");
 
 function parallaxSpiders() {
     // Vertical move
-    horizontalParallaxScroll(skyBackground, 0.02, 0, 0);
-    horizontalParallaxScroll(buildingsCenter, 0.1, 382, 505);
-    horizontalParallaxScroll(peter, 0.05, 404, 265);
-    horizontalParallaxScroll(spiderwebPeter, 0.05, -195, 245);
+    lateScroll(skyBackground, 0.02, 0, 0);
+    lateScroll(buildingsCenter, 0.05, 382, 505);
+    lateScroll(buildingsRight, 0.05, 903, 0);
+    lateScroll(buildingsLeft, 0.05, -58, 15);
+    lateScroll(peter, 0.1, 404, 265);
+    lateScroll(gwen, 0.1, 90, 265);
+    lateScroll(spiderwebPeter, 0.1, -195, 245);
 
     //Horizontal move
+    verticalParallaxByScroll(gwen, -0.1, 90, 265);
 
     //Diagonal move
-    diagonalParallaxScroll(buildingsRight, 0.1, 0.2, 903, 0);
-    diagonalParallaxScroll(buildingsLeft, -0.1, 0.2, -58, 15);
     diagonalParallaxScroll(miles, 0.1 , -0.1, 700, 220);
     diagonalParallaxScroll(spiderwebMiles, 0.1 , -0.1, 990, 273);
-    diagonalParallaxScroll(gwen, -0.1, -0.1, 90, 265);
 }
 
-function horizontalParallaxScroll(elem, factor, x, y) {
+function lateScroll(elem, factor, x, y) {
     var scroll = window.scrollY;
 
     var displacement = (scroll * factor) + y;
@@ -167,7 +168,7 @@ function horizontalParallaxScroll(elem, factor, x, y) {
     elem.style.transform = 'translate(' + x + 'px, ' + displacement + 'px)';
 }
 
-function verticalParallaxScroll(elem, factor, x, y) {
+function verticalParallaxByScroll(elem, factor, x, y) {
     var scroll = window.scrollY;
 
     var displacement = (scroll * factor) + x;
