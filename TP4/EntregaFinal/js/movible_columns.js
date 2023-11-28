@@ -5,6 +5,7 @@ const images = imagenContainer.querySelectorAll('div');
 
 window.addEventListener('scroll', function() {
     textsPassing();
+    animationCards();
 }); 
 
 
@@ -38,3 +39,33 @@ function textsPassing() {
     visibleImage.style.display = 'block';
     visibleText.style.opacity = 1;
 }
+
+const cardsContainer = document.querySelector('card-screen-conteiner');
+const cards = document.querySelectorAll('card-screen')
+
+function isElementInViewport(el, offset = 200) {
+    var rect = el.getBoundingClientRect();
+    return (
+      rect.top + offset <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.bottom >= offset &&
+      rect.left <= (window.innerWidth || document.documentElement.clientWidth) &&
+      rect.right >= 0
+    );
+}
+
+function animateCard(card, delay) {
+    setTimeout(() => {
+        card.classList.add('animation-card');
+    }, delay);
+}
+
+function animationCards() {
+    if(isElementInViewport(cardsContainer)){
+        cards.forEach((card, index) => {
+            const delay = index * 1000; 
+            animateCard(card, delay);
+        });
+    }
+}
+
+

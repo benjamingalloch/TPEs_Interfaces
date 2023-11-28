@@ -98,6 +98,23 @@
     width: 333px;
 }
 
+.animation-card {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: scale(0.8); /* Otra opción: transform: scale(0.8); */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1); /* Otra opción: transform: scale(1); */
+    }
+}
+
 /* -------------------------------- ghost- Los vengadores acompañando tu aventura ---------------------------------------- */
 
 .ghost-avengers-container {
