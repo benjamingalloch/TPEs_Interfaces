@@ -40,8 +40,8 @@ function textsPassing() {
     visibleText.style.opacity = 1;
 }
 
-const cardsContainer = document.querySelector('card-screen-conteiner');
-const cards = document.querySelectorAll('card-screen')
+const cardsContainer = document.querySelector('.card-screen-conteiner');
+const cards = document.querySelectorAll('.card-screen')
 
 function isElementInViewport(el, offset = 200) {
     var rect = el.getBoundingClientRect();
@@ -62,7 +62,7 @@ function animateCard(card, delay) {
 function animationCards() {
     if(isElementInViewport(cardsContainer)){
         cards.forEach((card, index) => {
-            const delay = index * 1000; 
+            const delay = index * 600; 
             animateCard(card, delay);
         });
     }
