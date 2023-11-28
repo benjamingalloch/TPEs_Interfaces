@@ -127,23 +127,40 @@
 #test_1 {
     position: absolute;
     top: -160px;
-    left: 50px;
+    left: 90px;
+    z-index: 10;
 }
 #test_2 {
     position: absolute;
     top: -35px;
-    left: 50px;
+    left: 90px;
+    z-index: 10;
 }
 #test_3 {
     position: absolute;
-    top: 185px;
-    left: 50px;
-    z-index: 1;
+    top: 150px;
+    left: 90px;
+    z-index: 10;
+}
+.gwen-card {
+}
+.gwen-card:hover {
+    cursor: pointer;
+    z-index: 11 !important;
+    animation: gwen-hover-animation 0.5s ease both;
 }
 
-.ghost-container {
-    
+@keyframes gwen-hover-animation {
+    from {
+        width: 500px;
+    }
+    to {
+        width: 530px;
+    }
 }
+
+
+
 
 .avengers-polygon {
     display: flex;

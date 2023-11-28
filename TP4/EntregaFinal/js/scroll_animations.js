@@ -3,12 +3,15 @@ const texts = textContainer.querySelectorAll('div');
 const imagenContainer = document.querySelector('.screenshoots-column');
 const images = imagenContainer.querySelectorAll('div');
 
+const gwenCards  = document.querySelector(".ghost-avengers-container").querySelectorAll(".gwen-card");
+
 window.addEventListener('scroll', function() {
     textsPassing();
     animationCards();
     scrollDelayGoblin();
     escalarLogo();
-}); 
+    scrollDelayGwenCards();
+});
 
 function textsPassing() {
     
@@ -69,7 +72,8 @@ function animationCards() {
     }
 }
 
-const item  = document.querySelector("#goblin");
+//-----------------------------------------------------------------------------------
+const goblin  = document.querySelector("#goblin");
 
 function scrollDelayGoblin() {
     
@@ -78,9 +82,27 @@ function scrollDelayGoblin() {
 
     var displacement = scroll * factor;
 
-    item.style.transform = 'translate(350px, ' + displacement + 'px)';
+    goblin.style.transform = 'translate(350px, ' + displacement + 'px)';
 }
 
+//-----------------------------------------------------------------------------------
+
+function scrollDelayGwenCards() {
+    gwenCards.forEach(card => {
+        if (isElementInViewport(card, 0)) {
+            var scroll = window.scrollY;
+            var factor = 0.07; // Puedes ajustar este valor según sea necesario
+
+            var displacement = (scroll * factor) - 50;
+
+            card.style.transform = 'translateY(' + displacement + 'px)';
+        }
+    }); 
+}
+
+
+
+//-----------------------------------------------------------------------------------
 const logo = document.querySelector("#logo-header");
 
 function escalarLogo() {
@@ -106,4 +128,5 @@ function escalarLogo() {
 };
 
 escalarLogo();
+//-----------------------------------------------------------------------------------
 
