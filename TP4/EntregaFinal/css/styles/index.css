@@ -225,7 +225,7 @@
     left: 0;
     top: 450px;
     width: 1070px;
-    height: 500px;
+    height: 530px;
     overflow: hidden;
 }
 #vengadores-sky,
@@ -240,9 +240,10 @@
 
 #vengadores-sky {
     top: 265px;
-    right: -539px;
-    width: 1077px;
+    right: -739px;
+    width: 1277px;
     z-index: 1;
+    object-fit: cover;
 }
 #vengadores-msmarvel {
     top: 1260px;
@@ -255,18 +256,20 @@
     z-index: 3;
 }
 #vengadores-hulk {
-    top: 1360px;
+    top: 1370px;
     right: -185px;
     z-index: 3;
 }
 #vengadores-grass {
     top: 265px;
-    right: -540px;
+    right: -560px;
+    width: 1097px;
     z-index: 4;
 }
 #vengadores-plants {
     top: 265px;
-    right: -540px;
+    right: -640px;
+    width: 1177px;
     z-index: 2;
 }
 
