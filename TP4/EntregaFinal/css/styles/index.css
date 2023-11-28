@@ -48,22 +48,27 @@
 }
 #gwen-spidergwen {
     z-index: 2;
+    transform: translate(90px, 265px);
     animation: fadeInGwen 1.5s ease-out forwards;
 }
 #miles-spiderman {
     z-index: 2;
+    transform: translate(700px, 220px);
     animation: fadeInMiles 1.5s ease-out forwards;
 }
 #peter-spiderman {
     z-index: 3;
+    transform: translate(404px, 265px);
     animation: fadeInPeter 1s linear  forwards;
 }
 #spiderweb-miles {
     z-index: 4;
+    transform: translate(990px, 273px);
     animation: fadeInMilesSpiderweb 1.5s ease-out forwards;
 }
 #spiderweb-peter {
     z-index: 4;
+    transform: translate(-195px, 245px);
     animation: fadeInPeterSpiderweb 1s linear  forwards;
 }
 
