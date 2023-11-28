@@ -14,7 +14,9 @@ html {
     justify-content: center;
 }
 
-
+.green-goblin {
+    z-index: 1;
+}
 
 body {
     width: 1280px;

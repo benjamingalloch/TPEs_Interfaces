@@ -12,21 +12,61 @@
     overflow: hidden;
     background-color: red;
 }
-#top-page-container img {
-}
-
-#buildings-left {
+#container-spidermans{
+    top: 0;
     position: absolute;
+    width: 1280px;
+    height: 2000px;
+    overflow: hidden;
+    z-index: 10;
+}
+#sky-background,
+#buildings-center,
+#buildings-left, 
+#buildings-right,
+#peter-spiderman,
+#gwen-spidergwen,
+#miles-spiderman,
+#spiderweb-miles,
+#spiderweb-peter {
+    position: absolute;
+}
+#sky-background {
+    z-index: 0;
+}
+#buildings-left {
+    z-index: 1;
     transform: translate(-58px, 15px);
 }
 #buildings-center {
-    position: absolute;
+    z-index: 1;
     transform: translate(382px, 505px);
 }
 #buildings-right {
-    position: absolute;
+    z-index: 1;
     transform: translate(903px, 0px);
 }
+#gwen-spidergwen {
+    z-index: 2;
+    transform: translate(90px, 265px);
+}
+#miles-spiderman {
+    z-index: 2;
+    transform: translate(700px, 220px);
+}
+#peter-spiderman {
+    z-index: 3;
+    transform: translate(404px, 265px);
+}
+#spiderweb-miles {
+    z-index: 4;
+    transform: translate(990px, 273px);
+}
+#spiderweb-peter {
+    z-index: 4;
+    transform: translate(-195px, 245px);
+}
+
 
 /* ----------------------------------------- Spidey section --------------------------------------------- */
 .spidey-absolute {
