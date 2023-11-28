@@ -1,4 +1,4 @@
-/* ----------------------------------------- Spidey section --------------------------------------------- */
+/* ----------------------------------------- Top page section --------------------------------------------- */
 #top-relative {
     position: relative;
     height: 1510px;
@@ -48,24 +48,78 @@
 }
 #gwen-spidergwen {
     z-index: 2;
-    transform: translate(90px, 265px);
+    animation: fadeInGwen 1.5s ease-out forwards;
 }
 #miles-spiderman {
     z-index: 2;
-    transform: translate(700px, 220px);
+    animation: fadeInMiles 1.5s ease-out forwards;
 }
 #peter-spiderman {
     z-index: 3;
-    transform: translate(404px, 265px);
+    animation: fadeInPeter 1s linear  forwards;
 }
 #spiderweb-miles {
     z-index: 4;
-    transform: translate(990px, 273px);
+    animation: fadeInMilesSpiderweb 1.5s ease-out forwards;
 }
 #spiderweb-peter {
     z-index: 4;
-    transform: translate(-195px, 245px);
+    animation: fadeInPeterSpiderweb 1s linear  forwards;
 }
+
+/* ----- Animation entrada de los elementos a la pantalla ----- */
+/*--GWEN--*/
+@keyframes fadeInGwen {
+    from {
+        transform: translate(-340px, 70px);
+    }
+    to {
+        transform: translate(90px, 265px);
+    }
+}
+
+/*--MILES--*/
+@keyframes fadeInMiles {
+    from {
+        transform: translate(1265px, 70px);
+    }
+    to {
+        transform: translate(700px, 220px);
+    }
+}
+@keyframes fadeInMilesSpiderweb {
+    from {
+        transform: translate(1555px, 123px);
+    }
+    to {
+        transform: translate(990px, 273px);
+    }
+}
+
+/*--PETER--*/
+@keyframes fadeInPeter {
+    0% {
+        transform: translate(604px, 365px) scale(0);
+    }
+    50% {
+        transform: translate(504px, 165px) scale(0.5);
+    }
+    100% {
+        transform: translate(404px, 265px) scale(1);
+    }
+}
+@keyframes fadeInPeterSpiderweb {
+    0% {
+        transform: translate(305px, 345px) scale(0);
+    }
+    50% {
+        transform: translate(290px, 125px) scale(0);
+    }
+    100% {
+        transform: translate(-195px, 245px) scale(1);
+    }
+}
+
 
 
 /* ----------------------------------------- Spidey section --------------------------------------------- */
@@ -147,11 +201,11 @@
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(60px); /* Otra opción: transform: scale(0.8); */
+        transform: translateY(60px); 
     }
     to {
         opacity: 1;
-        transform: translateY(0px); /* Otra opción: transform: scale(1); */
+        transform: translateY(0px); 
     }
 }
 
