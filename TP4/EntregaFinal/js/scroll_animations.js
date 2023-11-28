@@ -11,6 +11,7 @@ window.addEventListener('scroll', function() {
     scrollDelayGoblin();
     escalarLogo();
     scrollDelayGwenCards();
+    parallaxSpiders();
 });
 
 function textsPassing() {
@@ -76,8 +77,8 @@ function animationCards() {
 const goblin  = document.querySelector("#goblin");
 
 function scrollDelayGoblin() {
-    
     var scroll = window.scrollY;
+
     var factor = 0.1; // Puedes ajustar este valor según sea necesario
 
     var displacement = scroll * factor;
@@ -130,3 +131,56 @@ function escalarLogo() {
 escalarLogo();
 //-----------------------------------------------------------------------------------
 
+const skyBackground = document.querySelector("#sky-background");
+const buildingsCenter = document.querySelector("#buildings-center");
+const buildingsRight = document.querySelector("#buildings-right");
+const buildingsLeft = document.querySelector("#buildings-left");
+const peter = document.querySelector("#peter-spiderman");
+const gwen = document.querySelector("#gwen-spidergwen");
+const miles = document.querySelector("#miles-spiderman");
+const spiderwebMiles = document.querySelector("#spiderweb-miles");
+const spiderwebPeter = document.querySelector("#spiderweb-peter");
+
+
+function parallaxSpiders() {
+    // Vertical move
+    lateScroll(skyBackground, 0.02, 0, 0);
+    lateScroll(buildingsCenter, 0.05, 382, 505);
+    lateScroll(buildingsRight, 0.05, 903, 0);
+    lateScroll(buildingsLeft, 0.05, -58, 15);
+    lateScroll(peter, 0.1, 404, 265);
+    lateScroll(gwen, 0.1, 90, 265);
+    lateScroll(spiderwebPeter, 0.1, -195, 245);
+
+    //Horizontal move
+    verticalParallaxByScroll(gwen, -0.1, 90, 265);
+
+    //Diagonal move
+    diagonalParallaxScroll(miles, 0.1 , -0.1, 700, 220);
+    diagonalParallaxScroll(spiderwebMiles, 0.1 , -0.1, 990, 273);
+}
+
+function lateScroll(elem, factor, x, y) {
+    var scroll = window.scrollY;
+
+    var displacement = (scroll * factor) + y;
+
+    elem.style.transform = 'translate(' + x + 'px, ' + displacement + 'px)';
+}
+
+function verticalParallaxByScroll(elem, factor, x, y) {
+    var scroll = window.scrollY;
+
+    var displacement = (scroll * factor) + x;
+
+    elem.style.transform = 'translate(' + displacement + 'px, ' + y + 'px)';
+}
+
+function diagonalParallaxScroll(elem, factorX, factorY, x, y) {
+    var scroll = window.scrollY;
+
+    var displacementX = (scroll * factorX) + x;
+    var displacementY = (scroll * factorY) + y;
+
+    elem.style.transform = 'translate(' + displacementX + 'px, ' + displacementY + 'px)';
+}
