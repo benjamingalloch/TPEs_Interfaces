@@ -220,36 +220,53 @@
 .avengers-polygon h1 {
     width: 650px;
 }
-
-#vengadores-1 {
+#vengadores-box{
+    position: relative;
+    left: 0;
+    top: 450px;
+    width: 1070px;
+    height: 500px;
+    overflow: hidden;
+}
+#vengadores-sky,
+#vengadores-msmarvel, 
+#vengadores-blackpanther, 
+#vengadores-hulk, 
+#vengadores-grass, 
+#vengadores-plants {
     position: absolute;
-    transform: translate(0px, 710px);
+    transform: translate(-50%, -50%);
+}
+
+#vengadores-sky {
+    top: 265px;
+    right: -539px;
     width: 1077px;
     z-index: 1;
 }
-#vengadores-2 {
-    position: absolute;
-    transform: translate(-230px, 690px);
+#vengadores-msmarvel {
+    top: 1260px;
+    right: 300px;
     z-index: 3;
 }
-#vengadores-3 {
-    position: absolute;
-    transform: translate(150px, 500px);
+#vengadores-blackpanther {
+    top: 1070px;
+    right: 0px;
     z-index: 3;
 }
-#vengadores-4 {
-    position: absolute;
-    transform: translate(360px, 790px);
+#vengadores-hulk {
+    top: 1360px;
+    right: -185px;
     z-index: 3;
 }
-#vengadores-5 {
-    position: absolute;
-    transform: translate(0px, 710px);
+#vengadores-grass {
+    top: 265px;
+    right: -540px;
     z-index: 4;
 }
-#vengadores-6 {
-    position: absolute;
-    transform: translate(0px, 710px);
+#vengadores-plants {
+    top: 265px;
+    right: -540px;
     z-index: 2;
 }
 
@@ -379,8 +396,6 @@
     width: 313.5px;
     height: 398.5px;
 }
-
-
 
 /* -------------------------------- BOTTOM ---------------------------------------- */
 .aux-polygon {
