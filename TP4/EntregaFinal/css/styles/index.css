@@ -37,14 +37,19 @@
 #buildings-left {
     z-index: 1;
     transform: translate(-58px, 15px);
+    animation: fadeInBuildingsLeft 0.7s ease-out forwards;
 }
 #buildings-center {
     z-index: 1;
     transform: translate(382px, 505px);
+    animation: fadeInBuildingsCenter 0.7s ease-out forwards;
+
 }
 #buildings-right {
     z-index: 1;
     transform: translate(903px, 0px);
+    animation: fadeInBuildingsRight 0.7s ease-out forwards;
+
 }
 #gwen-spidergwen {
     z-index: 2;
@@ -124,6 +129,34 @@
         transform: translate(-195px, 245px) scale(1);
     }
 }
+/*--BUILDINGS LEFT--*/
+@keyframes fadeInBuildingsLeft {
+    from {
+        transform: translate(-108px, 80px) scale(0.8);
+    }
+    to {
+        transform: translate(-58px, 15px) scale(1);
+    }
+}
+/*--BUILDINGS CENTER--*/
+@keyframes fadeInBuildingsCenter {
+    from {
+        transform: translate(382px, 605px) scale(0.8);
+    }
+    to {
+        transform: translate(382px, 505px) scale(1);
+    }
+}
+/*--BUILDINGS RIGHT--*/
+@keyframes fadeInBuildingsRight {
+    from {
+        transform: translate(953px, 65px) scale(0.8);
+    }
+    to {
+        transform: translate(903px, 0px) scale(1);
+    }
+}    
+
 
 
 
